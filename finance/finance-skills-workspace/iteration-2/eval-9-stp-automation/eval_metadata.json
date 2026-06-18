@@ -1,0 +1,13 @@
+{
+  "eval_id": 9,
+  "eval_name": "stp-automation-acat-transfers",
+  "prompt": "Our account transfer process currently requires manual intervention for about 60% of incoming ACATs. The ops team is copying data between three systems and manually matching transfer items against our records. I want to automate this to get our STP rate above 90%. What approach should I take?",
+  "assertions": [
+    {"text": "Defines or calculates STP rate and sets improvement targets", "type": "contains_concept"},
+    {"text": "Identifies exception categories and auto-resolution patterns", "type": "contains_concept"},
+    {"text": "Discusses API vs RPA integration approaches for legacy systems", "type": "contains_concept"},
+    {"text": "Outlines 5+ steps or phases in the automation approach", "type": "depth_check"},
+    {"text": "Identifies 3+ distinct edge cases or pitfalls in transfer automation", "type": "depth_check"},
+    {"text": "Focus is on end-to-end automation and exception handling, not task routing or approvals", "type": "conceptual_focus"}
+  ]
+}

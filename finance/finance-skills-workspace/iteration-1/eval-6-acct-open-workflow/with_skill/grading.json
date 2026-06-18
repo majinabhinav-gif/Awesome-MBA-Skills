@@ -1,0 +1,50 @@
+{
+  "eval_id": 6,
+  "eval_name": "account-opening-workflow-nigo",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "Addresses NIGO root cause analysis and specific rejection patterns",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'nigo' -> \"...Redesigning Your Schwab Account Opening Workflow: From 28% NIGO to Under 10% ## Diagnosis A 28% NIGO rate means roughly 1...\" | 'root cause*' -> \"...before reaching Schwab. Let me map your specific issues to root causes: - **Missing signatures** (typically 20-30% of NIGOs indus...\""
+    },
+    {
+      "text": "Proposes workflow validation gates or pre-submission checks",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'validat*' -> \"...is consistent with firms that lack automated pre-submission validation (industry data: firms without automated validation often ex...\""
+    },
+    {
+      "text": "Discusses operational process improvement (not just compliance requirements)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Focus direction correct \u2014 required topic(s) ['process_improvement']: 52 hits (automat* x5, checklist* x3, nigo x14, process* x5, root cause* x3, training x1) vs excluded topic(s) ['compliance_requirements']: 5 hits (beneficial owner* x5)"
+    },
+    {
+      "text": "Mentions specific custodian integration or submission mechanics",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'schwab' -> \"# Redesigning Your Schwab Account Opening Workflow: From 28% NIGO to Under 10% ## Di...\" | 'api*' -> \"...s 6. **Submitted to Schwab** -- application transmitted via API (standard accounts) or portal (complex accounts) 7. **NIGO...\""
+    },
+    {
+      "text": "Outlines 5+ steps or phases in the redesigned workflow",
+      "status": "pass",
+      "passed": true,
+      "evidence": "10 distinct enumerated steps/phases (need 5+). e.g. ['...# The Redesigned Process ### Phase 1: Signature Enforcement (Weeks...', '...g you to roughly 20-21%. ### Phase 2: Single-Entry Data Collection...', '...g you to roughly 13-16%. ### Phase 3: Document Completeness Gate a...']"
+    },
+    {
+      "text": "Identifies 4+ distinct edge cases or pitfalls in account opening",
+      "status": "fail",
+      "passed": false,
+      "evidence": "Only 2 edge cases/pitfalls evidenced (need 4+): 2 distinct marker terms (['edge case*', 'exception*']), 0 enumerated items in edge-case/pitfall sections"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "manual_review": 0,
+    "total": 6,
+    "pass_rate": 0.8333333333333334
+  }
+}

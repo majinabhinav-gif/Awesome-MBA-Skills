@@ -1,0 +1,139 @@
+{
+  "skill_name": "finance-skills",
+  "iteration": 1,
+  "timestamp": "2026-03-31",
+  "configurations": [
+    {
+      "name": "with_skill",
+      "description": "Response with relevant skill SKILL.md loaded into context"
+    },
+    {
+      "name": "without_skill",
+      "description": "Response using only base model knowledge"
+    }
+  ],
+  "evals": [
+    {
+      "eval_id": 1,
+      "eval_name": "regbi-rollover-recommendation",
+      "category": "triggering-confusion",
+      "results": {
+        "with_skill": {
+          "pass_rate": 1.0,
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "total_tokens": 27131,
+          "duration_ms": 65695,
+          "qualitative_score": 4.75
+        },
+        "without_skill": {
+          "pass_rate": 1.0,
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "total_tokens": 17203,
+          "duration_ms": 66255,
+          "qualitative_score": 5.0
+        }
+      }
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "fiduciary-proprietary-fund-conflict",
+      "category": "triggering-confusion",
+      "results": {
+        "with_skill": {
+          "pass_rate": 1.0,
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "total_tokens": 25766,
+          "duration_ms": 56267,
+          "qualitative_score": 5.0
+        },
+        "without_skill": {
+          "pass_rate": 1.0,
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "total_tokens": 16474,
+          "duration_ms": 44291,
+          "qualitative_score": 4.0
+        }
+      }
+    },
+    {
+      "eval_id": 11,
+      "eval_name": "core-twr-mwr-calculation",
+      "category": "domain-accuracy",
+      "results": {
+        "with_skill": {
+          "pass_rate": 1.0,
+          "assertions_passed": 4,
+          "assertions_total": 4,
+          "total_tokens": 24028,
+          "duration_ms": 47286,
+          "qualitative_score": 4.75
+        },
+        "without_skill": {
+          "pass_rate": 1.0,
+          "assertions_passed": 4,
+          "assertions_total": 4,
+          "total_tokens": 16470,
+          "duration_ms": 38915,
+          "qualitative_score": 4.0
+        }
+      }
+    },
+    {
+      "eval_id": 13,
+      "eval_name": "wm-rebalance-with-tlh-coordination",
+      "category": "domain-accuracy",
+      "results": {
+        "with_skill": {
+          "pass_rate": 1.0,
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "total_tokens": 16399,
+          "duration_ms": 42362,
+          "qualitative_score": 4.75
+        },
+        "without_skill": {
+          "pass_rate": 1.0,
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "total_tokens": 16399,
+          "duration_ms": 42362,
+          "qualitative_score": 3.5
+        }
+      }
+    }
+  ],
+  "summary": {
+    "assertion_pass_rates": {
+      "with_skill": 1.0,
+      "without_skill": 1.0,
+      "delta": 0.0
+    },
+    "qualitative_scores": {
+      "with_skill_mean": 4.81,
+      "without_skill_mean": 4.13,
+      "delta": 0.69
+    },
+    "token_usage": {
+      "with_skill_mean": 23331,
+      "without_skill_mean": 16637,
+      "overhead_pct": 40.2
+    },
+    "duration": {
+      "with_skill_mean_ms": 52903,
+      "without_skill_mean_ms": 47956,
+      "overhead_pct": 10.3
+    },
+    "analyst_observations": [
+      "Assertion pass rates are 100% for both configurations — the automated assertions are non-discriminating at this threshold. The assertions catch the presence of key concepts but cannot measure depth, precision, or safety of the advice. Qualitative scoring reveals a meaningful +0.69 point gap that assertions miss.",
+      "Skills add the most value on multi-domain intersection questions (rebalancing + tax-loss harvesting: +1.25 delta) where the skill provides structured checklists and cross-domain coordination that base knowledge lacks.",
+      "Skills add meaningful value on compliance nuance (fiduciary: +1.0 delta) through frameworks like the mitigation hierarchy and the disclosure-vs-consent distinction.",
+      "Skills add the least value when base model knowledge is already strong and the question is well-represented in training data (Reg BI rollover: -0.25 delta). The without_skill response actually covered an edge case (NUA) that the skill missed.",
+      "Token overhead averages 40% for with-skill runs (reading SKILL.md files adds context). Duration overhead is only 10%, suggesting the extra tokens are mostly input (skill content) not output.",
+      "Recommendation: Assertions need to be more discriminating — add depth-of-analysis assertions (e.g., 'provides 3+ specific cross-account wash-sale sources') and safety assertions (e.g., 'warns about NIIT threshold') to capture the qualitative gap."
+    ]
+  }
+}

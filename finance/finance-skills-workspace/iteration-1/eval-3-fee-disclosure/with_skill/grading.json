@@ -1,0 +1,50 @@
+{
+  "eval_id": 3,
+  "eval_name": "fee-disclosure-form-adv",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "References Form ADV Part 2A Item 5",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'form adv' -> \"# Fee Disclosure Guidance for Form ADV Part 2A Your situation involves three distinct compensatio...\" | 'item 5' -> \"...inct compensation streams that must each be disclosed under Item 5 of Form ADV Part 2A: a tiered AUM fee, a fixed financial pl...\""
+    },
+    {
+      "text": "Addresses 12b-1 fee disclosure as indirect compensation or conflict",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: '12b-1' -> \"...t 2A: a tiered AUM fee, a fixed financial planning fee, and 12b-1 fee revenue from mutual fund positions. Below is how to han...\" | 'conflict*' -> \"...und positions. Below is how to handle each, followed by the conflict-of-interest disclosure that ties them together. --- ## 1....\""
+    },
+    {
+      "text": "Discusses how to present tiered fee schedules in disclosure documents",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'tier*' -> \"...must each be disclosed under Item 5 of Form ADV Part 2A: a tiered AUM fee, a fixed financial planning fee, and 12b-1 fee reve...\" | 'fee schedule*' -> \"...disclosure that ties them together. --- ## 1. Tiered AUM Fee Schedule Disclose the full fee schedule with explicit tiers, billin...\" | 'disclos*' -> \"# Fee Disclosure Guidance for Form ADV Part 2A Your situation involves thre...\""
+    },
+    {
+      "text": "Provides 3+ specific rule numbers or regulatory citations",
+      "status": "pass",
+      "passed": true,
+      "evidence": "5 distinct citations (need 3+): ['12b-1', 'form adv', 'form crs', 'item 10', 'item 5']"
+    },
+    {
+      "text": "Identifies 3+ distinct edge cases or pitfalls in fee disclosure",
+      "status": "pass",
+      "passed": true,
+      "evidence": "4 edge cases/pitfalls evidenced (need 3+): 0 distinct marker terms ([]), 4 enumerated items in edge-case/pitfall sections"
+    },
+    {
+      "text": "Focuses on regulatory disclosure requirements, not billing system implementation",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Focus direction correct \u2014 required topic(s) ['disclosure']: 31 hits (disclos* x19, form adv x2, form crs x3, item 5 x3, part 2a x4) vs excluded topic(s) ['billing']: 7 hits (bill x1, billing x4, refund* x2)"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

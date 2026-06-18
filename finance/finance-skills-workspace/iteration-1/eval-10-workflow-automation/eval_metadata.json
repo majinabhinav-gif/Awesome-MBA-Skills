@@ -1,0 +1,12 @@
+{
+  "eval_id": 10,
+  "eval_name": "workflow-automation-approval-chains",
+  "prompt": "I need to build an approval workflow for account maintenance requests. Address changes need one approval, beneficiary changes need two approvals with a compliance review, and re-registrations need three approvals including a supervisor sign-off. Each level has different SLA targets and escalation rules. How should I design this?",
+  "assertions": [
+    {"text": "Designs multi-level approval chain with different thresholds by request type", "type": "contains_concept"},
+    {"text": "Addresses SLA targets and escalation rules for aging items", "type": "contains_concept"},
+    {"text": "Discusses task routing or state machine modeling", "type": "contains_concept"},
+    {"text": "Outlines 5+ steps or phases in the workflow design", "type": "depth_check"},
+    {"text": "Focus is on approval chains and routing, not end-to-end STP rate optimization", "type": "conceptual_focus"}
+  ]
+}

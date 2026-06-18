@@ -1,0 +1,496 @@
+{
+  "skill_name": "finance-skills",
+  "description": "Triggering accuracy and domain correctness tests for finance skills",
+  "evals": [
+    {
+      "id": 1,
+      "category": "triggering-confusion",
+      "pair": "reg-bi vs fiduciary-standards vs investment-suitability",
+      "prompt": "My client wants to roll their 401k into an IRA with us. We're a dual-registrant \u2014 I handle some accounts as a broker and some as an adviser. Which standard of care applies to this rollover recommendation, and what documentation do I need to keep? The account is about $340K and they're 58 years old.",
+      "expected_skill": "reg-bi",
+      "expected_output": "Should identify this as a Reg BI recommendation (rollover from ERISA plan to IRA via broker-dealer capacity), cite the four Reg BI obligations (Disclosure, Care, Conflict of Interest, Compliance), mention PTE 2020-02 for the ERISA side, and discuss documentation of reasonably available alternatives. Should NOT default to fiduciary analysis unless the adviser capacity is explicitly chosen.",
+      "assertions": [
+        {
+          "text": "Mentions Reg BI by name",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Cites the four Reg BI obligations",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Mentions PTE 2020-02 or DOL prohibited transaction exemption",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Discusses reasonably available alternatives analysis",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Does not incorrectly apply pure fiduciary standard without acknowledging BD capacity",
+          "type": "absence"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "category": "triggering-confusion",
+      "pair": "reg-bi vs fiduciary-standards vs investment-suitability",
+      "prompt": "We're an RIA and one of our advisers just recommended a proprietary fund to a client when a cheaper third-party option with similar performance exists. The client is a retired teacher, moderate risk tolerance, $600K portfolio. Is there a fiduciary issue here?",
+      "expected_skill": "fiduciary-standards",
+      "expected_output": "Should apply IA Act Section 206 fiduciary analysis \u2014 duty of care (was the recommendation in the client's best interest given cheaper alternative?) and duty of loyalty (proprietary fund creates a conflict). Should discuss whether the conflict was disclosed, mitigated, and whether the adviser can demonstrate the recommendation was still in the client's best interest despite the cost differential.",
+      "assertions": [
+        {
+          "text": "Applies IA Act Section 206 fiduciary framework",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Analyzes both duty of care and duty of loyalty",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Identifies proprietary fund as conflict of interest",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Discusses cost differential materiality",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Does not apply FINRA suitability as primary standard",
+          "type": "absence"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "category": "triggering-confusion",
+      "pair": "fee-disclosure vs fee-billing",
+      "prompt": "I'm building out the fee schedule section of our Form ADV Part 2A. We charge a tiered AUM fee (1.0% on first $1M, 0.75% on next $2M, 0.50% above $3M), plus a $2,500 annual financial planning fee. We also get 12b-1 fees from some mutual fund positions. How should we disclose all of this?",
+      "expected_skill": "fee-disclosure",
+      "expected_output": "Should focus on disclosure requirements \u2014 Form ADV Item 5 structure, how to present the tiered AUM schedule, requirement to disclose the financial planning fee as a separate service, obligation to disclose 12b-1 fees as indirect compensation creating a conflict, and reference to Reg BI CRS fee disclosure if applicable. Should NOT focus on billing mechanics (how to calculate, prorate, or collect fees).",
+      "assertions": [
+        {
+          "text": "References Form ADV Part 2A Item 5",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Addresses 12b-1 fee disclosure as indirect compensation or conflict",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Discusses how to present tiered fee schedules in disclosure documents",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Provides 3+ specific rule numbers or regulatory citations",
+          "type": "depth_check"
+        },
+        {
+          "text": "Identifies 3+ distinct edge cases or pitfalls in fee disclosure",
+          "type": "depth_check"
+        },
+        {
+          "text": "Focuses on regulatory disclosure requirements, not billing system implementation",
+          "type": "conceptual_focus"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "category": "triggering-confusion",
+      "pair": "fee-disclosure vs fee-billing",
+      "prompt": "I need to set up our quarterly billing process. We bill in advance on AUM as of the last business day of the prior quarter, with new accounts prorated from their funding date. When a client terminates mid-quarter we refund the unused portion. How should I structure the billing calculation and what edge cases do I need to handle?",
+      "expected_skill": "fee-billing",
+      "expected_output": "Should focus on billing mechanics \u2014 AUM valuation date selection, proration formulas for new/terminated accounts, mid-quarter termination refund calculation, handling of account additions/withdrawals during the quarter, billing frequency, custodian fee deduction setup, and reconciliation. Should NOT primarily discuss disclosure obligations.",
+      "assertions": [
+        {
+          "text": "Provides proration formula or methodology for partial-quarter accounts",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Addresses mid-quarter termination refund calculation",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Discusses billing system mechanics (custodian deduction, valuation dates)",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Identifies 4+ distinct edge cases or pitfalls in billing",
+          "type": "depth_check"
+        },
+        {
+          "text": "Outlines 5+ steps or phases in the billing process",
+          "type": "depth_check"
+        },
+        {
+          "text": "Focuses on operational billing implementation, not regulatory disclosure",
+          "type": "conceptual_focus"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "category": "triggering-confusion",
+      "pair": "account-opening-workflow vs account-opening-compliance",
+      "prompt": "We're onboarding a new institutional client \u2014 a family trust with three trustees, two of whom are US persons and one is a UK resident. The trust document names a corporate trustee as well. Walk me through the compliance requirements for opening this account.",
+      "expected_skill": "account-opening-compliance",
+      "expected_output": "Should focus on CIP/KYC verification for all trustees (including the foreign person), beneficial ownership certification for the entity, OFAC screening of all parties, risk-based approval tier (elevated due to foreign trustee), enhanced due diligence triggers, and documentation requirements. Should NOT focus on operational workflow steps like NIGO management or custodian submission mechanics.",
+      "assertions": [
+        {
+          "text": "Addresses CIP/KYC for each trustee individually",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Mentions beneficial ownership certification requirement",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Flags the non-US trustee as requiring enhanced due diligence",
+          "type": "contains_concept"
+        },
+        {
+          "text": "References OFAC or sanctions screening",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Provides 3+ specific rule numbers or regulatory citations",
+          "type": "depth_check"
+        },
+        {
+          "text": "Identifies 3+ distinct edge cases or pitfalls specific to trust entities with foreign persons",
+          "type": "depth_check"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "category": "triggering-confusion",
+      "pair": "account-opening-workflow vs account-opening-compliance",
+      "prompt": "Our NIGO rate for new accounts submitted to Schwab is running at 28%. Most rejections are missing signatures, incorrect entity titling, and incomplete beneficiary designations. I need to redesign our account opening workflow to get this under 10%. What should the new process look like?",
+      "expected_skill": "account-opening-workflow",
+      "expected_output": "Should focus on operational workflow redesign \u2014 document validation gates, pre-submission QC checks, digital signature integration, common titling error patterns and how to prevent them, NIGO root cause analysis, STP rate improvement tactics, and custodian submission best practices.",
+      "assertions": [
+        {
+          "text": "Addresses NIGO root cause analysis and specific rejection patterns",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Proposes workflow validation gates or pre-submission checks",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Discusses operational process improvement (not just compliance requirements)",
+          "type": "conceptual_focus"
+        },
+        {
+          "text": "Mentions specific custodian integration or submission mechanics",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Outlines 5+ steps or phases in the redesigned workflow",
+          "type": "depth_check"
+        },
+        {
+          "text": "Identifies 4+ distinct edge cases or pitfalls in account opening",
+          "type": "depth_check"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "category": "triggering-confusion",
+      "pair": "historical-risk vs forward-risk",
+      "prompt": "I'm looking at a fund that returned 12% annualized over the last 5 years with a standard deviation of 18%. The max drawdown was -32% during COVID. How do I assess whether the risk-adjusted returns are actually good, and what metrics should I use to compare it against its benchmark?",
+      "expected_skill": "historical-risk",
+      "expected_output": "Should analyze realized/historical risk metrics \u2014 Sharpe ratio calculation from the given data, Sortino ratio, maximum drawdown analysis, recovery time, comparison to benchmark using tracking error and information ratio. Should ground analysis in the historical data provided, not project future scenarios.",
+      "assertions": [
+        {
+          "text": "Calculates or discusses Sharpe ratio using provided return and volatility data",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Analyzes the -32% max drawdown in context (severity, recovery)",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Mentions Sortino ratio or downside risk metrics",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Provides 3+ specific risk metrics with explanations",
+          "type": "depth_check"
+        },
+        {
+          "text": "Analysis is grounded in historical/realized data, not forward projections",
+          "type": "conceptual_focus"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "category": "triggering-confusion",
+      "pair": "historical-risk vs forward-risk",
+      "prompt": "I'm building a new portfolio for a client with a 15-year horizon. I need to estimate the probability that a 70/30 stock/bond allocation will fail to meet their 6% real return target. What risk models and simulation approaches should I use?",
+      "expected_skill": "forward-risk",
+      "expected_output": "Should discuss forward-looking risk modeling \u2014 Monte Carlo simulation, capital market assumptions (expected returns, volatilities, correlations), scenario analysis, regime-switching models, fat-tail adjustments. Should focus on projecting future outcomes, not analyzing past performance.",
+      "assertions": [
+        {
+          "text": "Discusses Monte Carlo simulation or stochastic modeling",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Mentions capital market assumptions or expected return estimation",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Addresses probability of meeting the return target over the time horizon",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Focus is on forward projection methodology, not historical analysis",
+          "type": "conceptual_focus"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "category": "triggering-confusion",
+      "pair": "stp-automation vs workflow-automation",
+      "prompt": "Our account transfer process currently requires manual intervention for about 60% of incoming ACATs. The ops team is copying data between three systems and manually matching transfer items against our records. I want to automate this to get our STP rate above 90%. What approach should I take?",
+      "expected_skill": "stp-automation",
+      "expected_output": "Should focus on straight-through processing methodology \u2014 measuring current STP rate, identifying manual touchpoints, exception-based processing design, API vs RPA evaluation for the three-system integration, exception categorization and auto-resolution rules, and STP benchmarking targets for transfer processing.",
+      "assertions": [
+        {
+          "text": "Defines or calculates STP rate and sets improvement targets",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Identifies exception categories and auto-resolution patterns",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Discusses API vs RPA integration approaches for legacy systems",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Outlines 5+ steps or phases in the automation approach",
+          "type": "depth_check"
+        },
+        {
+          "text": "Identifies 3+ distinct edge cases or pitfalls in transfer automation",
+          "type": "depth_check"
+        },
+        {
+          "text": "Focus is on end-to-end automation and exception handling, not task routing or approvals",
+          "type": "conceptual_focus"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "category": "triggering-confusion",
+      "pair": "stp-automation vs workflow-automation",
+      "prompt": "I need to build an approval workflow for account maintenance requests. Address changes need one approval, beneficiary changes need two approvals with a compliance review, and re-registrations need three approvals including a supervisor sign-off. Each level has different SLA targets and escalation rules. How should I design this?",
+      "expected_skill": "workflow-automation",
+      "expected_output": "Should focus on workflow design \u2014 multi-level approval chains, delegation of authority, SLA monitoring and escalation rules, task routing logic, state machine modeling for the different request types, and audit trail requirements.",
+      "assertions": [
+        {
+          "text": "Designs multi-level approval chain with different thresholds by request type",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Addresses SLA targets and escalation rules for aging items",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Discusses task routing or state machine modeling",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Outlines 5+ steps or phases in the workflow design",
+          "type": "depth_check"
+        },
+        {
+          "text": "Focus is on approval chains and routing, not end-to-end STP rate optimization",
+          "type": "conceptual_focus"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "category": "domain-accuracy",
+      "domain": "core",
+      "prompt": "A client invested $100,000 in a fund. After 6 months the fund was up 15% and they added another $50,000. After another 6 months the total value is $178,000. Calculate both the time-weighted return (TWR) and the money-weighted return (MWR/IRR) and explain why they differ.",
+      "expected_output": "TWR: Sub-period 1 return = 15%. Sub-period 2: start value = $115K + $50K = $165K, end = $178K, return = 7.88%. TWR = (1.15)(1.0788) - 1 = 24.06%. MWR/IRR: solve -100K at t=0, -50K at t=0.5, +178K at t=1. IRR will be lower than TWR because more capital was deployed after the stronger period. Should clearly explain the divergence.",
+      "assertions": [
+        {
+          "text": "TWR calculation is approximately 24% (range 23.5-24.5%)",
+          "type": "numerical_accuracy"
+        },
+        {
+          "text": "MWR/IRR is lower than TWR",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Shows sub-period return calculations step by step",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Identifies TWR as manager skill, MWR as investor experience",
+          "type": "contains_concept"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "category": "domain-accuracy",
+      "domain": "compliance",
+      "prompt": "We're a broker-dealer and one of our reps has a turnover ratio of 8.2 and a cost-to-equity ratio of 14% in a retired client's account. The client is 72 years old with moderate risk tolerance and a $420K account. The rep says the client approved every trade. What are the compliance issues?",
+      "expected_output": "Should identify quantitative suitability (FINRA Rule 2111 third prong) violations \u2014 turnover ratio above 6 is presumptively excessive, cost-to-equity ratio of 14% means the account must earn 14% just to break even. Client approval does not excuse excessive trading. Should flag churning indicators, senior investor protections, and recommended supervisory response.",
+      "assertions": [
+        {
+          "text": "Cites FINRA Rule 2111 quantitative suitability prong",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Identifies turnover ratio above 6 as presumptively excessive",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Explains cost-to-equity ratio meaning (account must earn 14% to break even)",
+          "type": "contains_concept"
+        },
+        {
+          "text": "States that client approval of individual trades does not cure excessive trading",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Mentions senior investor protections given client age",
+          "type": "contains_concept"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 13,
+      "category": "domain-accuracy",
+      "domain": "wealth-management",
+      "prompt": "I have a taxable portfolio worth $800K that has drifted from its 60/40 target to 68/32 stocks/bonds. My threshold band is +/- 5%. I also have about $15K in unrealized losses in some equity positions. Should I rebalance, and if so, how should I coordinate with tax-loss harvesting?",
+      "expected_output": "Should identify that equities have breached the 5% band (68% vs 65% upper limit). Recommend selling ~$64K in equities to buy bonds. Should coordinate with TLH \u2014 harvest the $15K in losses first by selling losing positions as part of the rebalance sell, replace with similar (not substantially identical) securities to maintain exposure, and be aware of wash-sale rules (30-day window, across all accounts including retirement). Net effect: rebalance AND capture tax alpha.",
+      "assertions": [
+        {
+          "text": "Identifies that the 5% band has been breached (68% > 65%)",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Calculates approximate rebalance trade size (~$64K)",
+          "type": "numerical_accuracy"
+        },
+        {
+          "text": "Recommends harvesting the $15K loss as part of the rebalance",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Warns about wash-sale rules",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Mentions replacement security selection",
+          "type": "contains_concept"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 14,
+      "category": "domain-accuracy",
+      "domain": "advisory-practice",
+      "prompt": "I'm preparing for a quarterly review meeting with a retired couple (ages 68 and 65). They have a $1.8M portfolio across IRA, Roth IRA, and taxable accounts. The husband turns 73 next year and will need to start RMDs. What should my review prep cover?",
+      "expected_output": "Should cover: performance vs benchmark and IPS targets, asset allocation drift check, RMD estimation for the husband's IRA (using Uniform Lifetime Table), tax-efficient withdrawal sequencing across the three account types, Roth conversion opportunity analysis before RMDs begin, income projection for the coming year, insurance review, and estate planning coordination.",
+      "assertions": [
+        {
+          "text": "Addresses RMD calculation and timing (husband turning 73)",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Discusses tax-efficient withdrawal sequencing across IRA/Roth/taxable",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Mentions Roth conversion opportunity before RMDs begin",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Includes performance review against IPS or benchmark",
+          "type": "contains_concept"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 15,
+      "category": "domain-accuracy",
+      "domain": "trading-operations",
+      "prompt": "Walk me through what happens to a market order to buy 5,000 shares of AAPL from the moment I hit submit to when the shares appear in my account. Cover routing, execution, clearing, and settlement.",
+      "expected_output": "Should cover the full lifecycle: order entry and validation, smart order routing (consideration of exchanges, dark pools, Reg NMS Rule 611 order protection), execution venue selection, trade execution and fill confirmation, post-trade allocation, NSCC trade comparison and netting (CNS system), DTC settlement on T+1, and final position update in the client's account.",
+      "assertions": [
+        {
+          "text": "Mentions smart order routing and venue selection considerations",
+          "type": "contains_concept"
+        },
+        {
+          "text": "References Reg NMS or order protection rule",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Describes NSCC clearing and netting process",
+          "type": "contains_concept"
+        },
+        {
+          "text": "States T+1 settlement cycle for US equities",
+          "type": "contains_concept"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 16,
+      "category": "domain-accuracy",
+      "domain": "client-operations",
+      "prompt": "A client wants to transfer their $2.1M account from another broker-dealer to us via ACAT. The account has stocks, bonds, mutual funds, and some options positions. The sending firm is being slow \u2014 it's been 5 business days and we haven't received the assets. What are our options?",
+      "expected_output": "Should explain ACAT process and FINRA Rule 11870 timeline (3 business days to validate, then deliver within timeline). After 5 days, the sending firm may be in violation. Options: file a FINRA complaint, escalate via NSCC reclaim process. Should note that options may need special handling (not all options transfer via ACAT), mutual fund positions may need to be liquidated if not on the receiving firm's platform, and the client should be advised about potential costs.",
+      "assertions": [
+        {
+          "text": "References FINRA Rule 11870 and the ACAT timeline requirements",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Identifies recourse options (FINRA complaint, NSCC escalation)",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Notes that some assets may not transfer cleanly (options, proprietary funds)",
+          "type": "contains_concept"
+        },
+        {
+          "text": "Mentions the 3-business-day validation requirement",
+          "type": "contains_concept"
+        }
+      ],
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "eval_id": 5,
+  "eval_name": "account-opening-compliance-trust",
+  "prompt": "We're onboarding a new institutional client — a family trust with three trustees, two of whom are US persons and one is a UK resident. The trust document names a corporate trustee as well. Walk me through the compliance requirements for opening this account.",
+  "assertions": [
+    {"text": "Addresses CIP/KYC for each trustee individually", "type": "contains_concept"},
+    {"text": "Mentions beneficial ownership certification requirement", "type": "contains_concept"},
+    {"text": "Flags the non-US trustee as requiring enhanced due diligence", "type": "contains_concept"},
+    {"text": "References OFAC or sanctions screening", "type": "contains_concept"},
+    {"text": "Provides 3+ specific rule numbers or regulatory citations", "type": "depth_check"},
+    {"text": "Identifies 3+ distinct edge cases or pitfalls specific to trust entities with foreign persons", "type": "depth_check"}
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "eval_id": 9,
+  "eval_name": "stp-automation-acat-transfers",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "Defines or calculates STP rate and sets improvement targets",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'stp' -> \"# Automating ACATs to Achieve 90%+ STP ## Current State Assessment A 60% manual intervention rat...\" | '90%' -> \"# Automating ACATs to Achieve 90%+ STP ## Current State Assessment A 60% manual interventio...\""
+    },
+    {
+      "text": "Identifies exception categories and auto-resolution patterns",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'exception*' -> \"...rtainly applies: 20% of root causes are driving 80% of your exceptions. Identify the top 3-5 categories by volume before writing a...\" | 'categor*' -> \"...at transfer is not STP. Instrument your current process to categorize every manual touch. Have ops staff track the reason each ti...\" | 'auto-resol*' -> \"...g with a confidence threshold: matches above 95% confidence auto-resolve, matches below that route to manual review. **Reference da...\""
+    },
+    {
+      "text": "Discusses API vs RPA integration approaches for legacy systems",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'api*' -> \"...fter data quality is addressed. **Eliminate re-keying with API-based integration.** Identify which of your three systems c...\" | 'rpa' -> \"...more systems are legacy with no API or import facility, use RPA as a temporary bridge -- but plan to replace it. RPA is bri...\""
+    },
+    {
+      "text": "Outlines 5+ steps or phases in the automation approach",
+      "status": "pass",
+      "passed": true,
+      "evidence": "6 distinct enumerated steps/phases (need 5+). e.g. ['...causes in priority order. ## Phase 1: Baseline Measurement and Roo...', '...before writing any code. ## Phase 2: Data Quality Remediation (Mo...', '...rate from 40% to 60-65%. ## Phase 3: System Integration (Months 3...']"
+    },
+    {
+      "text": "Identifies 3+ distinct edge cases or pitfalls in transfer automation",
+      "status": "pass",
+      "passed": true,
+      "evidence": "5 edge cases/pitfalls evidenced (need 3+): 2 distinct marker terms (['exception*', 'failing to']), 5 enumerated items in edge-case/pitfall sections"
+    },
+    {
+      "text": "Focus is on end-to-end automation and exception handling, not task routing or approvals",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Focus direction correct \u2014 required topic(s) ['automation']: 67 hits (auto-resol* x12, automat* x17, exception* x19, rpa x4, stp x15) vs excluded topic(s) ['routing_approvals']: 7 hits (approval* x2, queue* x2, route* x2, routing x1)"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

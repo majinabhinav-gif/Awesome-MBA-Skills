@@ -1,0 +1,44 @@
+{
+  "eval_id": 13,
+  "eval_name": "wm-rebalance-with-tlh-coordination",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "Identifies that the 5% band has been breached (68% > 65%)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'band*' -> \"...oth asset classes have drifted beyond your +/- 5% tolerance band. The equity overweight exposes you to more risk than your t...\" | 'breach*' -> \"...cument the rebalance** with date, trigger reason (threshold breach), trades executed, and resulting allocation for compliance...\" | '8%' -> \"...---------|------------| | Stocks | 60% | 68% | +8% | +/- 5% | Yes | | Bonds | 40% | 32%...\""
+    },
+    {
+      "text": "Calculates approximate rebalance trade size (~$64K)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Found $64,000 within [$54,400, $73,600] -> \"...urrently $256,000) - Sell equities: $544,000 - $480,000 = **$64,000** - Buy bonds: $320,000 - $256,000 = **$64,000** ## How to...\""
+    },
+    {
+      "text": "Recommends harvesting the $15K loss as part of the rebalance",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'harvest*' -> \"# Rebalancing and Tax-Loss Harvesting Coordination ## Should You Rebalance? Yes. Your portfolio...\" | '$15k' -> \"...MFJ / $200,000 single): | Scenario | Rate | Tax Savings on $15K Loss | |----------|------|--------------------------| | 15%...\""
+    },
+    {
+      "text": "Warns about wash-sale rules",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'wash sale*' -> \"...securities:** To maintain equity exposure during the 30-day wash-sale window, immediately purchase a similar but not substantiall...\""
+    },
+    {
+      "text": "Mentions replacement security selection",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'replacement*' -> \"...nitely to offset future gains. ### Step 3: Select Lots and Replacement Securities **Lot selection:** Use Specific Identification...\""
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

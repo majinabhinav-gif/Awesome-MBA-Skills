@@ -1,0 +1,50 @@
+{
+  "eval_id": 6,
+  "eval_name": "account-opening-workflow-nigo",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Addresses NIGO root cause analysis and specific rejection patterns",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'nigo' -> \"# Redesigning Your Account Opening Workflow to Reduce NIGO Rate A 28% NIGO (Not In Good Order) rate is roughly triple...\" | 'root cause*' -> \"...Here is a structured approach to get below 10%. --- ## 1. Root Cause Analysis of Your Top Three Rejection Categories ### Missin...\""
+    },
+    {
+      "text": "Proposes workflow validation gates or pre-submission checks",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'validat*' -> \"...t the NIGO checklist before submission. - **Schwab-specific validation:** Check for common Schwab-specific rejections: - Account...\""
+    },
+    {
+      "text": "Discusses operational process improvement (not just compliance requirements)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Focus direction correct \u2014 required topic(s) ['process_improvement']: 36 hits (checklist* x9, nigo x11, process* x8, qc x2, root cause* x1, training x1) vs excluded topic(s) ['compliance_requirements']: 2 hits (beneficial owner* x1, suitability x1)"
+    },
+    {
+      "text": "Mentions specific custodian integration or submission mechanics",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'schwab' -> \"...r clients fill account opening paperwork from a blank form. Schwab's ACAT and new account forms accept pre-filled data -- use...\" | 'e-sign*' -> \"...: Client Signing Session (Controlled Execution) - **Prefer e-signature where Schwab supports it.** Schwab's electronic account ope...\""
+    },
+    {
+      "text": "Outlines 5+ steps or phases in the redesigned workflow",
+      "status": "fail",
+      "passed": false,
+      "evidence": "Only 4 distinct enumerated steps/phases (need 5+). e.g. ['...Four-Stage Gate Process ### Stage 1: Pre-Fill and Data Gathering...', '...e-filled data -- use it. ### Stage 2: Internal Quality Review (Bef...', '...count on the checklist. ### Stage 3: Client Signing Session (Cont...']"
+    },
+    {
+      "text": "Identifies 4+ distinct edge cases or pitfalls in account opening",
+      "status": "fail",
+      "passed": false,
+      "evidence": "Only 2 edge cases/pitfalls evidenced (need 4+): 2 distinct marker terms (['common error*', 'often overlooked']), 0 enumerated items in edge-case/pitfall sections"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "manual_review": 0,
+    "total": 6,
+    "pass_rate": 0.6666666666666666
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "eval_id": 13,
+  "eval_name": "wm-rebalance-with-tlh-coordination",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Identifies that the 5% band has been breached (68% > 65%)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'band*' -> \"...rcentage points above your 60% target. Since your threshold band is +/- 5% (tolerating 55%-65% equities), you are 3 points b...\" | 'outside' -> \"...- **Rebalance fully, not partially:** Since you are already outside the band, restore to the 60% target rather than just gettin...\" | '65%' -> \"...target. Since your threshold band is +/- 5% (tolerating 55%-65% equities), you are 3 points beyond the upper band. This tri...\""
+    },
+    {
+      "text": "Calculates approximate rebalance trade size (~$64K)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Found $64,000 within [$54,400, $73,600] -> \"...20K bonds (60/40) - **Required trades:** Sell approximately $64K in equities and buy $64K in bonds ## Coordinating with Tax...\""
+    },
+    {
+      "text": "Recommends harvesting the $15K loss as part of the rebalance",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'harvest*' -> \"# Rebalancing a Drifted 60/40 Portfolio with Tax-Loss Harvesting ## Should You Rebalance? Yes. Your equity allocation is 6...\" | '$15k' -> \"...ting with Tax-Loss Harvesting Since you have approximately $15K in unrealized losses in some equity positions, you should p...\""
+    },
+    {
+      "text": "Warns about wash-sale rules",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'wash sale*' -> \"...allocation to restore the 60/40 target. ### Step 4: Avoid Wash Sales If you want to stay invested in the same equity sectors wh...\""
+    },
+    {
+      "text": "Mentions replacement security selection",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'substitute*' -> \"...ng equity sales, making this a tax-efficient rebalance. Use substitute securities for 31 days to avoid wash sales on the harvested...\""
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

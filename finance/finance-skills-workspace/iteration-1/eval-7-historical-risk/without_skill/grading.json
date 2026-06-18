@@ -1,0 +1,44 @@
+{
+  "eval_id": 7,
+  "eval_name": "historical-risk-fund-assessment",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Calculates or discusses Sharpe ratio using provided return and volatility data",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'sharpe' -> \"...complementary metrics. ## Key Metrics to Calculate ### 1. Sharpe Ratio The Sharpe ratio measures excess return per unit of...\" | 'risk-free' -> \".... Risk-adjusted analysis requires context -- a benchmark, a risk-free rate, and several complementary metrics. ## Key Metrics to...\""
+    },
+    {
+      "text": "Analyzes the -32% max drawdown in context (severity, recovery)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'drawdown*' -> \"...return: 12% - Annualized standard deviation: 18% - Maximum drawdown: -32% (COVID period) These numbers alone tell you very lit...\" | 'recover*' -> \"...ook significant peak-to-trough risk relative to its return. Recovery time matters too -- how many months did it take to recover...\" | '32' -> \"...% - Annualized standard deviation: 18% - Maximum drawdown: -32% (COVID period) These numbers alone tell you very little....\""
+    },
+    {
+      "text": "Mentions Sortino ratio or downside risk metrics",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'sortino' -> \"...fund's returns are skewed, this can be misleading. ### 2. Sortino Ratio The Sortino ratio replaces total volatility with dow...\""
+    },
+    {
+      "text": "Provides 3+ specific risk metrics with explanations",
+      "status": "pass",
+      "passed": true,
+      "evidence": "14 distinct risk metrics (need 3+): ['sharpe', 'sortino', 'max drawdown', 'maximum drawdown', 'calmar', 'information ratio', 'tracking error', 'treynor', 'beta', 'alpha', 'standard deviation', 'downside deviation', 'expected shortfall', 'omega ratio']"
+    },
+    {
+      "text": "Analysis is grounded in historical/realized data, not forward projections",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Focus direction correct \u2014 required topic(s) ['historical']: 1 hits (actual return* x1) vs excluded topic(s) ['forward']: 0 hits (none)"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

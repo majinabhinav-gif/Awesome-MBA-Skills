@@ -1,0 +1,11 @@
+{
+  "eval_id": 8,
+  "eval_name": "forward-risk-portfolio-simulation",
+  "prompt": "I'm building a new portfolio for a client with a 15-year horizon. I need to estimate the probability that a 70/30 stock/bond allocation will fail to meet their 6% real return target. What risk models and simulation approaches should I use?",
+  "assertions": [
+    {"text": "Discusses Monte Carlo simulation or stochastic modeling", "type": "contains_concept"},
+    {"text": "Mentions capital market assumptions or expected return estimation", "type": "contains_concept"},
+    {"text": "Addresses probability of meeting the return target over the time horizon", "type": "contains_concept"},
+    {"text": "Focus is on forward projection methodology, not historical analysis", "type": "conceptual_focus"}
+  ]
+}

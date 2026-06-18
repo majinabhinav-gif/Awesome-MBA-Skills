@@ -1,0 +1,50 @@
+{
+  "eval_id": 5,
+  "eval_name": "account-opening-compliance-trust",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Addresses CIP/KYC for each trustee individually",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'cip' -> \"...Mixed Jurisdictions ## 1. Customer Identification Program (CIP) / Know Your Customer (KYC) Under the USA PATRIOT Act and...\" | 'trustee*' -> \"...abstract) to confirm the trust's existence, the identity of trustees, beneficiaries, and the powers granted. ### Individual Tru...\""
+    },
+    {
+      "text": "Mentions beneficial ownership certification requirement",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'beneficial owner*' -> \"...rporation or equivalent formation documents. - Identify the beneficial owners of the corporate trustee who own 25% or more of equity inte...\" | 'certif*' -> \"...- Obtain a complete copy of the trust agreement (or a trust certification/abstract) to confirm the trust's existence, the identity of...\""
+    },
+    {
+      "text": "Flags the non-US trustee as requiring enhanced due diligence",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'enhanced due diligence' -> \"...d a foreign-resident individual trustee will likely warrant Enhanced Due Diligence (EDD) rather than standard due diligence. - Document the so...\" | 'non-us' -> \"...nment-issued identification. - Because this individual is a non-US person, additional considerations apply: - Verify identit...\""
+    },
+    {
+      "text": "References OFAC or sanctions screening",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'ofac' -> \"...ross-reference against reliable databases. - Screen against OFAC's Specially Designated Nationals (SDN) list, FinCEN 314(a)...\""
+    },
+    {
+      "text": "Provides 3+ specific rule numbers or regulatory citations",
+      "status": "pass",
+      "passed": true,
+      "evidence": "8 distinct citations (need 3+): ['31 cfr 1010.230', '31 cfr 1020.220', 'fatca', 'fincen 314(a)', 'finra rule 2111', 'reg bi', 'rule 2111', 'usa patriot act']"
+    },
+    {
+      "text": "Identifies 3+ distinct edge cases or pitfalls specific to trust entities with foreign persons",
+      "status": "fail",
+      "passed": false,
+      "evidence": "Only 0 edge cases/pitfalls evidenced (need 3+): 0 distinct marker terms ([]), 0 enumerated items in edge-case/pitfall sections"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "manual_review": 0,
+    "total": 6,
+    "pass_rate": 0.8333333333333334
+  }
+}

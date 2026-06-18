@@ -1,0 +1,38 @@
+{
+  "eval_id": 11,
+  "eval_name": "core-twr-mwr-calculation",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "TWR calculation is approximately 24% (range 23.5-24.5%)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Found 24.06% within [23.5%, 24.5%] -> \"...R_2) 1 + R_TWR = 1.15 x 1.0788 1 + R_TWR = 1.24061 R_TWR = +24.06% (cumulative over 1 year) ``` Since the measurement period...\""
+    },
+    {
+      "text": "MWR/IRR is lower than TWR",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'mwr' -> \"# TWR vs MWR Analysis: Client Investment Scenario ## Setup - **t = 0 (...\" | 'twr' -> \"# TWR vs MWR Analysis: Client Investment Scenario ## Setup - **...\" | 'lower' -> \"...he first half. Because more dollars were exposed during the lower-returning period, the MWR is pulled below the TWR. 3. **Ge...\""
+    },
+    {
+      "text": "Shows sub-period return calculations step by step",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'sub-period*' -> \"...,000** --- ## Time-Weighted Return (TWR) TWR chain-links sub-period returns calculated between each external cash flow, removin...\" | '15%' -> \"...lient invests $100,000 - **t = 0.5 (6 months):** Fund is up 15%, so portfolio value = $100,000 x 1.15 = **$115,000**. Clien...\""
+    },
+    {
+      "text": "Identifies TWR as manager skill, MWR as investor experience",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'manager*' -> \"...capital was invested in each period. TWR reflects the fund manager's pure investment skill. 2. **MWR weights periods by capit...\" | 'client*' -> \"# TWR vs MWR Analysis: Client Investment Scenario ## Setup - **t = 0 (start):** Client...\""
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

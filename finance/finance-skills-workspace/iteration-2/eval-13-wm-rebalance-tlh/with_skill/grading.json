@@ -1,0 +1,44 @@
+{
+  "eval_id": 13,
+  "eval_name": "wm-rebalance-with-tlh-coordination",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "Identifies that the 5% band has been breached (68% > 65%)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'band*' -> \"...- Equity drift: 68% - 60% = **+8%**, which exceeds your +5% band - Bond drift: 32% - 40% = **-8%**, which exceeds your -5% b...\" | 'exceed*' -> \"...threshold test: - Equity drift: 68% - 60% = **+8%**, which exceeds your +5% band - Bond drift: 32% - 40% = **-8%**, which exce...\" | '8%' -> \"...pplying the threshold test: - Equity drift: 68% - 60% = **+8%**, which exceeds your +5% band - Bond drift: 32% - 40% = **...\""
+    },
+    {
+      "text": "Calculates approximate rebalance trade size (~$64K)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Found $64,000 within [$54,400, $73,600] -> \"...--|---| | Equities | $544,000 | 68% | 60% | $480,000 | Sell $64,000 | | Bonds | $256,000 | 32% | 40% | $320,000 | Buy $64,000 |...\""
+    },
+    {
+      "text": "Recommends harvesting the $15K loss as part of the rebalance",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'harvest*' -> \"# Rebalancing an $800K Taxable Portfolio with Tax-Loss Harvesting Coordination ## Should You Rebalance? **Yes -- your portf...\" | '$15k' -> \"...erm losses | Varies | ~28.8% | Lower per dollar | | **Total $15K harvested (blended example)** | **$15,000** | **~30-40%** |...\""
+    },
+    {
+      "text": "Warns about wash-sale rules",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'wash sale*' -> \"...lacement must not be \"substantially identical\" to avoid the wash-sale rule: - **ETF swaps:** If you sell a Vanguard Total Stock...\""
+    },
+    {
+      "text": "Mentions replacement security selection",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'replacement*' -> \"...used losses carry forward indefinitely. ### Step 3: Select Replacement Securities For each position you sell at a loss, you must...\""
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

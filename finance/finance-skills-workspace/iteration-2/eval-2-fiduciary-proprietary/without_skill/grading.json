@@ -1,0 +1,44 @@
+{
+  "eval_id": 2,
+  "eval_name": "fiduciary-proprietary-fund-conflict",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Applies IA Act Section 206 fiduciary framework",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'advisers act' -> \"...our firm owes clients a fiduciary duty under the Investment Advisers Act of 1940. This duty has two primary components: 1. **Duty o...\" | 'fiduciary' -> \"# Fiduciary Analysis: Proprietary Fund Recommendation **Yes, this rais...\""
+    },
+    {
+      "text": "Analyzes both duty of care and duty of loyalty",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'duty of care' -> \"...rs Act of 1940. This duty has two primary components: 1. **Duty of Care** -- the obligation to provide advice that is in the client...\" | 'duty of loyalty' -> \"...provide advice that is in the client's best interest. 2. **Duty of Loyalty** -- the obligation to put the client's interest ahead of t...\""
+    },
+    {
+      "text": "Identifies proprietary fund as conflict of interest",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'proprietary' -> \"# Fiduciary Analysis: Proprietary Fund Recommendation **Yes, this raises a significant fiduc...\" | 'conflict*' -> \"...s potentially violates both. ## Why This Is Problematic **Conflict of interest.** Proprietary funds generate revenue for the f...\""
+    },
+    {
+      "text": "Discusses cost differential materiality",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'cost*' -> \"...own interests ahead of the client's. Recommending a higher-cost product with no demonstrable benefit to the client fails th...\" | 'differential*' -> \"...is genuinely in the client's best interest despite the cost differential. On the facts presented -- similar performance, higher cost...\""
+    },
+    {
+      "text": "Does not apply FINRA suitability as primary standard",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Fiduciary/best-interest framing dominant or equal \u2014 suitability terms: 0 (none) vs fiduciary/best-interest terms: 14 (fiduciary x6, best interest x5, duty of loyalty x1, duty of care x1, advisers act x1)"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

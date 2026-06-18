@@ -1,0 +1,50 @@
+{
+  "eval_id": 6,
+  "eval_name": "account-opening-workflow-nigo",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "Addresses NIGO root cause analysis and specific rejection patterns",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'nigo' -> \"# Redesigning Your Account Opening Workflow to Reduce NIGO Rate from 28% to Under 10% ## Diagnosis A 28% NIGO rate a...\" | 'root cause*' -> \"...mplete beneficiary designations at 5-10% of all NIGOs. The root cause is almost certainly that your current workflow relies on ma...\""
+    },
+    {
+      "text": "Proposes workflow validation gates or pre-submission checks",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'validat*' -> \"...ew to catch errors that should be caught by system-enforced validation gates before anything reaches Schwab. ## Redesigned Workfl...\""
+    },
+    {
+      "text": "Discusses operational process improvement (not just compliance requirements)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Focus direction correct \u2014 required topic(s) ['process_improvement']: 70 hits (automat* x4, checklist* x4, nigo x19, process* x6, root cause* x4, training x1) vs excluded topic(s) ['compliance_requirements']: 5 hits (beneficial owner* x5)"
+    },
+    {
+      "text": "Mentions specific custodian integration or submission mechanics",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'schwab' -> \"...ate from 28% to Under 10% ## Diagnosis A 28% NIGO rate at Schwab means roughly 1 in 4 submissions is rejected, and your top...\" | 'api*' -> \"...Validated and approved packages are submitted to Schwab via API for standard account types, or via portal for complex types...\""
+    },
+    {
+      "text": "Outlines 5+ steps or phases in the redesigned workflow",
+      "status": "pass",
+      "passed": true,
+      "evidence": "10 distinct enumerated steps/phases (need 5+). e.g. ['...our-Phase Implementation ### Phase 1: E-Signature Enforcement (Wee...', '...28% to roughly 21-22%). ### Phase 2: Entity Titling and Account T...', '...nts (to roughly 16-17%). ### Phase 3: Beneficiary Designation Vali...']"
+    },
+    {
+      "text": "Identifies 4+ distinct edge cases or pitfalls in account opening",
+      "status": "fail",
+      "passed": false,
+      "evidence": "Only 1 edge cases/pitfalls evidenced (need 4+): 1 distinct marker terms (['common error*']), 0 enumerated items in edge-case/pitfall sections"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "manual_review": 0,
+    "total": 6,
+    "pass_rate": 0.8333333333333334
+  }
+}

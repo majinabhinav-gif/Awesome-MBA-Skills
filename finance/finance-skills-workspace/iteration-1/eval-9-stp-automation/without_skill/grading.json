@@ -1,0 +1,50 @@
+{
+  "eval_id": 9,
+  "eval_name": "stp-automation-acat-transfers",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Defines or calculates STP rate and sets improvement targets",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'stp' -> \"# Automating ACATS Transfers to Achieve 90%+ STP Rate ## Understanding the Problem A 60% manual interventi...\" | '90%' -> \"# Automating ACATS Transfers to Achieve 90%+ STP Rate ## Understanding the Problem A 60% manual inter...\""
+    },
+    {
+      "text": "Identifies exception categories and auto-resolution patterns",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'exception*' -> \"...estricted securities | Route to ops team with pre-populated exception details | The key insight: even transfers that require man...\" | 'categor*' -> \"...90%+. ## Recommended Approach ### Phase 1: Instrument and Categorize Failures Before building automation, understand exactly wh...\" | 'auto-resol*' -> \"...ble) - Machine learning on historical exception patterns to auto-resolve new edge cases ## Key Technical Considerations **NSCC/ACA...\""
+    },
+    {
+      "text": "Discusses API vs RPA integration approaches for legacy systems",
+      "status": "fail",
+      "passed": false,
+      "evidence": "Missing concept group(s): rpa/robotic process automation/screen-scrap*/screen scrap*. Found: 'api*' -> \"...rchestration service that connects to all three systems via API. Ops staff should never need to manually copy data. - **Eve...\""
+    },
+    {
+      "text": "Outlines 5+ steps or phases in the automation approach",
+      "status": "pass",
+      "passed": true,
+      "evidence": "5 distinct enumerated steps/phases (need 5+). e.g. ['...## Recommended Approach ### Phase 1: Instrument and Categorize Fa...', '...of manual interventions. ### Phase 2: Build an Automated Matching...', '...ces that need resolution ### Phase 3: Implement a Rules-Based Rout...']"
+    },
+    {
+      "text": "Identifies 3+ distinct edge cases or pitfalls in transfer automation",
+      "status": "pass",
+      "passed": true,
+      "evidence": "11 edge cases/pitfalls evidenced (need 3+): 3 distinct marker terms (['edge case*', 'exception*', 'complication*']), 11 enumerated items in edge-case/pitfall sections"
+    },
+    {
+      "text": "Focus is on end-to-end automation and exception handling, not task routing or approvals",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Focus direction correct \u2014 required topic(s) ['automation']: 32 hits (auto-resol* x1, automat* x20, exception* x5, stp x6) vs excluded topic(s) ['routing_approvals']: 8 hits (approval* x1, escalat* x1, queue* x2, route* x2, routing x2)"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "manual_review": 0,
+    "total": 6,
+    "pass_rate": 0.8333333333333334
+  }
+}

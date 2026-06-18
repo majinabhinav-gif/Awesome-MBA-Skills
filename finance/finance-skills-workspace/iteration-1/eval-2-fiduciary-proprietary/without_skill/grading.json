@@ -1,0 +1,44 @@
+{
+  "eval_id": 2,
+  "eval_name": "fiduciary-proprietary-fund-conflict",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Applies IA Act Section 206 fiduciary framework",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'sections 206' -> \"...Regulatory References - **Investment Advisers Act of 1940, Sections 206(1) and 206(2)** -- Anti-fraud provisions establishing fiduc...\" | 'fiduciary' -> \"# Fiduciary Analysis: Proprietary Fund Recommendation ## Short Answer...\""
+    },
+    {
+      "text": "Analyzes both duty of care and duty of loyalty",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'duty of care' -> \"...ent Advisers). This standard has two core components: 1. **Duty of Care** -- The adviser must provide advice that is in the client'...\" | 'duty of loyalty' -> \"..., and suitability relative to available alternatives. 2. **Duty of Loyalty** -- The adviser must not place their own interests (or the...\""
+    },
+    {
+      "text": "Identifies proprietary fund as conflict of interest",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'proprietary' -> \"# Fiduciary Analysis: Proprietary Fund Recommendation ## Short Answer Yes, this raises a si...\" | 'conflict*' -> \"...ient's. Revenue derived from proprietary products creates a conflict of interest that must be managed and disclosed. ## Why Thi...\""
+    },
+    {
+      "text": "Discusses cost differential materiality",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'cost*' -> \"...nvestigation into the recommendation. This means evaluating cost, performance, risk, and suitability relative to available a...\" | 'difference*' -> \"...20-year retirement horizon, compounded cost drag from that difference could reduce the portfolio by $70,000-$100,000 or more depe...\""
+    },
+    {
+      "text": "Does not apply FINRA suitability as primary standard",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Fiduciary/best-interest framing dominant or equal \u2014 suitability terms: 1 (suitability x1) vs fiduciary/best-interest terms: 20 (fiduciary x7, best interest x5, duty of loyalty x3, duty of care x2, advisers act x3)"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

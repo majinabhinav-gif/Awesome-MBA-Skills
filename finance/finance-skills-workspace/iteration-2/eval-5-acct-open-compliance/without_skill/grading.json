@@ -1,0 +1,50 @@
+{
+  "eval_id": 5,
+  "eval_name": "account-opening-compliance-trust",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Addresses CIP/KYC for each trustee individually",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'cip' -> \"...eficial owner is under the Customer Identification Program (CIP). - Classify the trust as a legal entity customer under Fin...\" | 'trustee*' -> \"...iew Opening an account for a family trust with mixed US/UK trustees and a corporate trustee involves multiple overlapping regul...\""
+    },
+    {
+      "text": "Mentions beneficial ownership certification requirement",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'beneficial owner*' -> \"...**revocable or irrevocable** trust, as this affects who the beneficial owner is under the Customer Identification Program (CIP). - Class...\" | 'certif*' -> \"...- Jurisdiction of formation - Articles of incorporation or certificate of formation (or equivalent) --- ## 3. Beneficial Ownersh...\""
+    },
+    {
+      "text": "Flags the non-US trustee as requiring enhanced due diligence",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'enhanced due diligence' -> \"...rivacy Notice** acknowledgment (Regulation S-P) --- ## 9. Enhanced Due Diligence (EDD) Considerations Given the complexity of this account,...\" | 'non-us' -> \"...ent-issued identification number instead, per CIP rules for non-US persons. ### Corporate Trustee - Full legal name of entity...\""
+    },
+    {
+      "text": "References OFAC or sanctions screening",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'ofac' -> \"...ons) --- ## 4. Anti-Money Laundering (AML) Screening ### OFAC Screening - Screen **all trustees** (individual and corpora...\""
+    },
+    {
+      "text": "Provides 3+ specific rule numbers or regulatory citations",
+      "status": "pass",
+      "passed": true,
+      "evidence": "9 distinct citations (need 3+): ['31 cfr 1010.230', 'erisa', 'fatca', 'fincen 314(a)', 'investment company act', 'regulation s-p', 'section 326', 'section 7701(a)(30)(e)']"
+    },
+    {
+      "text": "Identifies 3+ distinct edge cases or pitfalls specific to trust entities with foreign persons",
+      "status": "fail",
+      "passed": false,
+      "evidence": "Only 0 edge cases/pitfalls evidenced (need 3+): 0 distinct marker terms ([]), 0 enumerated items in edge-case/pitfall sections"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "manual_review": 0,
+    "total": 6,
+    "pass_rate": 0.8333333333333334
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "eval_id": 8,
+  "eval_name": "forward-risk-portfolio-simulation",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "Discusses Monte Carlo simulation or stochastic modeling",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'monte carlo' -> \"...techniques most appropriate for this question. --- ## 1. Monte Carlo Simulation (Primary Method) Monte Carlo simulation is the...\""
+    },
+    {
+      "text": "Mentions capital market assumptions or expected return estimation",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'capital market assumption*' -> \"...rmative analysis for a 15-year horizon. 2. **Challenge the capital market assumptions.** The parametric estimate suggests the expected return (5....\""
+    },
+    {
+      "text": "Addresses probability of meeting the return target over the time horizon",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'probability' -> \"# Estimating the Probability of Missing a 6% Real Return Target Over 15 Years (70/30 Sto...\" | 'target*' -> \"# Estimating the Probability of Missing a 6% Real Return Target Over 15 Years (70/30 Stock/Bond Portfolio) This is a forwa...\""
+    },
+    {
+      "text": "Focus is on forward projection methodology, not historical analysis",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Focus direction correct \u2014 required topic(s) ['forward']: 33 hits (expected return* x8, forward x3, forward-looking x1, monte carlo x5, scenario* x7, simulat* x9) vs excluded topic(s) ['historical']: 1 hits (historical x1)"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

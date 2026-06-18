@@ -1,0 +1,44 @@
+{
+  "eval_id": 10,
+  "eval_name": "workflow-automation-approval-chains",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "Designs multi-level approval chain with different thresholds by request type",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'approval*' -> \"# Approval Workflow Design for Account Maintenance Requests ## Overvi...\" | 'level*' -> \"..., SLA target, and rationale: | Maintenance Type | Approval Levels | Approvers | SLA Target | Rationale | |---|---|---|---|---...\""
+    },
+    {
+      "text": "Addresses SLA targets and escalation rules for aging items",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'sla*' -> \"...and re-registrations -- each with distinct approval depth, SLA targets, and escalation rules. The design follows BPM funda...\" | 'escalat*' -> \"...ions -- each with distinct approval depth, SLA targets, and escalation rules. The design follows BPM fundamentals and the delegati...\""
+    },
+    {
+      "text": "Discusses task routing or state machine modeling",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'state machine*' -> \"...entals and the delegation of authority matrix pattern, with state machine modeling, timeout escalation, and audit trail requirements...\""
+    },
+    {
+      "text": "Outlines 5+ steps or phases in the workflow design",
+      "status": "pass",
+      "passed": true,
+      "evidence": "6 distinct enumerated steps/phases (need 5+)."
+    },
+    {
+      "text": "Focus is on approval chains and routing, not end-to-end STP rate optimization",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Focus direction correct \u2014 required topic(s) ['routing_approvals']: 116 hits (approval* x31, approver* x12, delegat* x13, escalat* x19, queue* x4, route* x1) vs excluded topic(s) ['automation']: 7 hits (automat* x7)"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

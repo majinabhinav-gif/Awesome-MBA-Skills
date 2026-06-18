@@ -1,0 +1,262 @@
+{
+  "skill_name": "finance-skills",
+  "iteration": 2,
+  "timestamp": "2026-06-11",
+  "total_evals": 12,
+  "total_runs": 24,
+  "automated_grading": {
+    "note": "Recomputed 2026-06-11 with the rewritten grade_responses.py: word-boundary keyword matching, assertion meta-verbs stripped, ALL concept groups required per assertion (no 60% threshold), magnitude-consistent numeric matching, focus direction parsed from assertion text, and no default-pass paths (unscorable assertions are reported as manual_review and do not count as passes). Every pass/fail is reproducible by running: python3 grade_responses.py",
+    "summary": {
+      "with_skill": {
+        "assertions_passed": 61,
+        "assertions_total": 63,
+        "manual_review": 0,
+        "pass_rate": 0.9683
+      },
+      "without_skill": {
+        "assertions_passed": 56,
+        "assertions_total": 63,
+        "manual_review": 1,
+        "pass_rate": 0.8889
+      },
+      "delta_pass_rate": 0.0794,
+      "evals_where_skill_wins": 4,
+      "evals_where_baseline_wins": 0,
+      "evals_tied": 8
+    },
+    "per_eval": [
+      {
+        "eval_id": 1,
+        "eval_name": "regbi-rollover-recommendation",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        },
+        "without_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 5,
+          "assertions_failed": 1,
+          "manual_review": 0,
+          "pass_rate": 0.8
+        }
+      },
+      {
+        "eval_id": 2,
+        "eval_name": "fiduciary-proprietary-fund-conflict",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        }
+      },
+      {
+        "eval_id": 3,
+        "eval_name": "fee-disclosure-form-adv",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 6,
+          "assertions_failed": 1,
+          "manual_review": 0,
+          "pass_rate": 0.8333
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 6,
+          "assertions_failed": 1,
+          "manual_review": 0,
+          "pass_rate": 0.8333
+        }
+      },
+      {
+        "eval_id": 4,
+        "eval_name": "fee-billing-quarterly-process",
+        "with_skill": {
+          "assertions_passed": 6,
+          "assertions_total": 6,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        },
+        "without_skill": {
+          "assertions_passed": 6,
+          "assertions_total": 6,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        }
+      },
+      {
+        "eval_id": 5,
+        "eval_name": "account-opening-compliance-trust",
+        "with_skill": {
+          "assertions_passed": 6,
+          "assertions_total": 6,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 6,
+          "assertions_failed": 1,
+          "manual_review": 0,
+          "pass_rate": 0.8333
+        }
+      },
+      {
+        "eval_id": 6,
+        "eval_name": "account-opening-workflow-nigo",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 6,
+          "assertions_failed": 1,
+          "manual_review": 0,
+          "pass_rate": 0.8333
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 6,
+          "assertions_failed": 1,
+          "manual_review": 0,
+          "pass_rate": 0.8333
+        }
+      },
+      {
+        "eval_id": 7,
+        "eval_name": "historical-risk-fund-assessment",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        },
+        "without_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 1,
+          "pass_rate": 0.8
+        }
+      },
+      {
+        "eval_id": 8,
+        "eval_name": "forward-risk-portfolio-simulation",
+        "with_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 4,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        },
+        "without_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 4,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        }
+      },
+      {
+        "eval_id": 9,
+        "eval_name": "stp-automation-acat-transfers",
+        "with_skill": {
+          "assertions_passed": 6,
+          "assertions_total": 6,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        },
+        "without_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 6,
+          "assertions_failed": 2,
+          "manual_review": 0,
+          "pass_rate": 0.6667
+        }
+      },
+      {
+        "eval_id": 10,
+        "eval_name": "workflow-automation-approval-chains",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        }
+      },
+      {
+        "eval_id": 11,
+        "eval_name": "core-twr-mwr-calculation",
+        "with_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 4,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        },
+        "without_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 4,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        }
+      },
+      {
+        "eval_id": 13,
+        "eval_name": "wm-rebalance-with-tlh-coordination",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0
+        }
+      }
+    ]
+  },
+  "qualitative_results": {
+    "note": "No qualitative scoring was performed for iteration-2 runs."
+  },
+  "token_usage": {
+    "note": "Unavailable \u2014 iteration-2 runs were executed without timing.json capture, so token and duration figures cannot be reported for this iteration."
+  },
+  "duration": {
+    "note": "Unavailable \u2014 no timing.json files exist for iteration-2 runs."
+  },
+  "analyst_observations": [
+    "With-skill passes 61/63 assertions (96.8%) vs 56/63 (88.9%) without skill \u2014 a +7.9 percentage-point delta across all 12 evals.",
+    "With-skill wins 4 evals, loses 0, ties 8.",
+    "One without-skill assertion (eval 7 conceptual focus) could not be scored mechanically and is reported as manual_review; it is counted as not-passed.",
+    "Versus iteration-1 under the same grader: with-skill slipped 62->61 (eval 3 lost an enumerated-pitfalls assertion) and without-skill slipped 57->56. See iteration-2/analysis.md for the per-eval comparison.",
+    "Eval assertions were NOT strengthened between iterations (eval_metadata.json files are identical), so iteration-2 measures response variance, not skill changes against harder assertions."
+  ]
+}

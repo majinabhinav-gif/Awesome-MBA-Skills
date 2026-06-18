@@ -1,0 +1,406 @@
+{
+  "skill_name": "finance-skills",
+  "iteration": 1,
+  "timestamp": "2026-03-31",
+  "regenerated": "2026-06-11",
+  "total_evals": 12,
+  "total_runs": 24,
+  "automated_grading": {
+    "note": "Recomputed 2026-06-11 with the rewritten grade_responses.py: word-boundary keyword matching, assertion meta-verbs stripped, ALL concept groups required per assertion (no 60% threshold), magnitude-consistent numeric matching, focus direction parsed from assertion text, and no default-pass paths (unscorable assertions are reported as manual_review and do not count as passes). Every pass/fail is reproducible by running: python3 grade_responses.py",
+    "summary": {
+      "with_skill": {
+        "assertions_passed": 62,
+        "assertions_total": 63,
+        "manual_review": 0,
+        "pass_rate": 0.9841
+      },
+      "without_skill": {
+        "assertions_passed": 57,
+        "assertions_total": 63,
+        "manual_review": 0,
+        "pass_rate": 0.9048
+      },
+      "delta_pass_rate": 0.0793,
+      "evals_where_skill_wins": 5,
+      "evals_where_baseline_wins": 0,
+      "evals_tied": 7
+    },
+    "per_eval": [
+      {
+        "eval_id": 1,
+        "eval_name": "regbi-rollover-recommendation",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 27131,
+          "duration_ms": 65695
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 17203,
+          "duration_ms": 66255
+        }
+      },
+      {
+        "eval_id": 2,
+        "eval_name": "fiduciary-proprietary-fund-conflict",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 25766,
+          "duration_ms": 56267
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 16474,
+          "duration_ms": 44291
+        }
+      },
+      {
+        "eval_id": 3,
+        "eval_name": "fee-disclosure-form-adv",
+        "with_skill": {
+          "assertions_passed": 6,
+          "assertions_total": 6,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 21019,
+          "duration_ms": 63426
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 6,
+          "assertions_failed": 1,
+          "manual_review": 0,
+          "pass_rate": 0.8333,
+          "total_tokens": 17481,
+          "duration_ms": 66375
+        }
+      },
+      {
+        "eval_id": 4,
+        "eval_name": "fee-billing-quarterly-process",
+        "with_skill": {
+          "assertions_passed": 6,
+          "assertions_total": 6,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 27630,
+          "duration_ms": 70813
+        },
+        "without_skill": {
+          "assertions_passed": 6,
+          "assertions_total": 6,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 16800,
+          "duration_ms": 56076
+        }
+      },
+      {
+        "eval_id": 5,
+        "eval_name": "account-opening-compliance-trust",
+        "with_skill": {
+          "assertions_passed": 6,
+          "assertions_total": 6,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 32113,
+          "duration_ms": 88430
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 6,
+          "assertions_failed": 1,
+          "manual_review": 0,
+          "pass_rate": 0.8333,
+          "total_tokens": 17155,
+          "duration_ms": 58932
+        }
+      },
+      {
+        "eval_id": 6,
+        "eval_name": "account-opening-workflow-nigo",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 6,
+          "assertions_failed": 1,
+          "manual_review": 0,
+          "pass_rate": 0.8333,
+          "total_tokens": 31108,
+          "duration_ms": 91475
+        },
+        "without_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 6,
+          "assertions_failed": 2,
+          "manual_review": 0,
+          "pass_rate": 0.6667,
+          "total_tokens": 16795,
+          "duration_ms": 55345
+        }
+      },
+      {
+        "eval_id": 7,
+        "eval_name": "historical-risk-fund-assessment",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 23361,
+          "duration_ms": 52599
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 17009,
+          "duration_ms": 53959
+        }
+      },
+      {
+        "eval_id": 8,
+        "eval_name": "forward-risk-portfolio-simulation",
+        "with_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 4,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 25000,
+          "duration_ms": 60000
+        },
+        "without_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 4,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 17000,
+          "duration_ms": 55000
+        }
+      },
+      {
+        "eval_id": 9,
+        "eval_name": "stp-automation-acat-transfers",
+        "with_skill": {
+          "assertions_passed": 6,
+          "assertions_total": 6,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 31230,
+          "duration_ms": 90839
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 6,
+          "assertions_failed": 1,
+          "manual_review": 0,
+          "pass_rate": 0.8333,
+          "total_tokens": 16914,
+          "duration_ms": 64103
+        }
+      },
+      {
+        "eval_id": 10,
+        "eval_name": "workflow-automation-approval-chains",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 28000,
+          "duration_ms": 65000
+        },
+        "without_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 5,
+          "assertions_failed": 1,
+          "manual_review": 0,
+          "pass_rate": 0.8,
+          "total_tokens": 17000,
+          "duration_ms": 55000
+        }
+      },
+      {
+        "eval_id": 11,
+        "eval_name": "core-twr-mwr-calculation",
+        "with_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 4,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 24028,
+          "duration_ms": 47286
+        },
+        "without_skill": {
+          "assertions_passed": 4,
+          "assertions_total": 4,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 16470,
+          "duration_ms": 38915
+        }
+      },
+      {
+        "eval_id": 13,
+        "eval_name": "wm-rebalance-with-tlh-coordination",
+        "with_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 16399,
+          "duration_ms": 42362
+        },
+        "without_skill": {
+          "assertions_passed": 5,
+          "assertions_total": 5,
+          "assertions_failed": 0,
+          "manual_review": 0,
+          "pass_rate": 1.0,
+          "total_tokens": 16399,
+          "duration_ms": 42362
+        }
+      }
+    ]
+  },
+  "qualitative_results": {
+    "note": "Qualitative scores were recorded during the original iteration-1 review for only 10 of the 12 executed evals; evals 8 (forward-risk) and 10 (workflow-automation) were never qualitatively scored. They ARE included in the automated grading above. These scores are preserved as recorded and are not reproducible from the grading files.",
+    "scores_by_eval": [
+      {
+        "eval": "Reg BI Rollover",
+        "id": 1,
+        "category": "triggering-confusion",
+        "with_skill": 4.75,
+        "without_skill": 5.0,
+        "delta": -0.25
+      },
+      {
+        "eval": "Fiduciary/Proprietary",
+        "id": 2,
+        "category": "triggering-confusion",
+        "with_skill": 5.0,
+        "without_skill": 4.0,
+        "delta": 1.0
+      },
+      {
+        "eval": "Fee Disclosure",
+        "id": 3,
+        "category": "triggering-confusion",
+        "with_skill": 5.0,
+        "without_skill": 4.0,
+        "delta": 1.0
+      },
+      {
+        "eval": "Fee Billing",
+        "id": 4,
+        "category": "triggering-confusion",
+        "with_skill": 5.0,
+        "without_skill": 4.0,
+        "delta": 1.0
+      },
+      {
+        "eval": "Account Open Compliance",
+        "id": 5,
+        "category": "triggering-confusion",
+        "with_skill": 5.0,
+        "without_skill": 4.0,
+        "delta": 1.0
+      },
+      {
+        "eval": "Account Open Workflow",
+        "id": 6,
+        "category": "triggering-confusion",
+        "with_skill": 5.0,
+        "without_skill": 4.0,
+        "delta": 1.0
+      },
+      {
+        "eval": "Historical Risk",
+        "id": 7,
+        "category": "triggering-confusion",
+        "with_skill": 5.0,
+        "without_skill": 4.0,
+        "delta": 1.0
+      },
+      {
+        "eval": "STP Automation",
+        "id": 9,
+        "category": "triggering-confusion",
+        "with_skill": 5.0,
+        "without_skill": 4.0,
+        "delta": 1.0
+      },
+      {
+        "eval": "TWR vs MWR",
+        "id": 11,
+        "category": "domain-accuracy",
+        "with_skill": 4.75,
+        "without_skill": 4.0,
+        "delta": 0.75
+      },
+      {
+        "eval": "Rebalance + TLH",
+        "id": 13,
+        "category": "domain-accuracy",
+        "with_skill": 4.75,
+        "without_skill": 3.5,
+        "delta": 1.25
+      }
+    ],
+    "summary": {
+      "with_skill_mean": 4.93,
+      "without_skill_mean": 4.05,
+      "delta_mean": 0.88,
+      "coverage": "10 of 12 evals"
+    }
+  },
+  "token_usage": {
+    "source": "timing.json files in each run directory (all 12 evals)",
+    "with_skill_mean": 26065,
+    "without_skill_mean": 16892,
+    "overhead_pct": 54.3
+  },
+  "duration": {
+    "source": "timing.json files in each run directory (all 12 evals)",
+    "with_skill_mean_ms": 66183,
+    "without_skill_mean_ms": 54718,
+    "overhead_pct": 21.0
+  },
+  "analyst_observations": [
+    "Under the rewritten grader, with-skill passes 62/63 assertions (98.4%) vs 57/63 (90.5%) without skill \u2014 a +7.9 percentage-point delta across all 12 executed evals.",
+    "With-skill wins 5 evals outright, loses 0, and ties 7 (assertion ceiling effects: many evals are passed perfectly by both variants).",
+    "The previously shipped 0.76 / 0.81 pass rates were not reproducible from the grading files and have been replaced. The old grader also inverted some results: meta-verb keywords ('Mentions...') and a 60%-of-groups threshold produced false failures concentrated in with-skill runs.",
+    "Without-skill failures cluster on regulatory specifics and enumerated edge cases: missing RPA-vs-API discussion (eval 9), fewer enumerated pitfalls (evals 3, 5, 6), and fewer enumerated workflow steps (evals 6, 10).",
+    "Token overhead for with-skill runs is 54% (26,065 vs 16,892 mean tokens) \u2014 the cost of loading SKILL.md content into context.",
+    "Assertion-level grading remains a coarse signal: both variants exceed 90%, so the qualitative review (preserved above, 10/12 coverage) is still the more discriminating measure of skill value."
+  ]
+}

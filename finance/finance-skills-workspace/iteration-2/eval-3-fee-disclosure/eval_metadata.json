@@ -1,0 +1,13 @@
+{
+  "eval_id": 3,
+  "eval_name": "fee-disclosure-form-adv",
+  "prompt": "I'm building out the fee schedule section of our Form ADV Part 2A. We charge a tiered AUM fee (1.0% on first $1M, 0.75% on next $2M, 0.50% above $3M), plus a $2,500 annual financial planning fee. We also get 12b-1 fees from some mutual fund positions. How should we disclose all of this?",
+  "assertions": [
+    {"text": "References Form ADV Part 2A Item 5", "type": "contains_concept"},
+    {"text": "Addresses 12b-1 fee disclosure as indirect compensation or conflict", "type": "contains_concept"},
+    {"text": "Discusses how to present tiered fee schedules in disclosure documents", "type": "contains_concept"},
+    {"text": "Provides 3+ specific rule numbers or regulatory citations", "type": "depth_check"},
+    {"text": "Identifies 3+ distinct edge cases or pitfalls in fee disclosure", "type": "depth_check"},
+    {"text": "Focuses on regulatory disclosure requirements, not billing system implementation", "type": "conceptual_focus"}
+  ]
+}

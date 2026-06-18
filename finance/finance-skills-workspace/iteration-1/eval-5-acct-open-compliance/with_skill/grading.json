@@ -1,0 +1,50 @@
+{
+  "eval_id": 5,
+  "eval_name": "account-opening-compliance-trust",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "Addresses CIP/KYC for each trustee individually",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'cip' -> \"...ownership determination (see Section 3 below). --- ## 2. CIP Verification for All Three Individual Trustees Under USA P...\" | 'trustee*' -> \"...rements for Opening a Family Trust Account with Mixed US/UK Trustees and a Corporate Trustee This is a complex account opening...\""
+    },
+    {
+      "text": "Mentions beneficial ownership certification requirement",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'beneficial owner*' -> \"...revocable or irrevocable -- because this drives the entire beneficial ownership analysis. - **Revocable (living) trust where the grantor r...\" | 'certif*' -> \"...ain and review the trust document (trust agreement or trust certification). - Classify the trust as revocable or irrevocable and docu...\""
+    },
+    {
+      "text": "Flags the non-US trustee as requiring enhanced due diligence",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'enhanced due diligence' -> \"...ty. - PEP matches or significant adverse media hits trigger enhanced due diligence, including source-of-wealth analysis. --- ## 6. Enhanced...\" | 'non-us' -> \"...iance requirements. The combination of a trust structure, a non-US person (UK resident trustee), and a corporate trustee place...\""
+    },
+    {
+      "text": "References OFAC or sanctions screening",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'ofac' -> \"...on behalf of the trust. - Verify the identity (CIP) and run OFAC screening on every identified beneficial owner and control...\""
+    },
+    {
+      "text": "Provides 3+ specific rule numbers or regulatory citations",
+      "status": "pass",
+      "passed": true,
+      "evidence": "10 distinct citations (need 3+): ['31 cfr 1010.230', 'fincen 314(a)', 'finra rule 4512', 'form adv', 'form crs', 'reg bi', 'rule 4512', 'section 3']"
+    },
+    {
+      "text": "Identifies 3+ distinct edge cases or pitfalls specific to trust entities with foreign persons",
+      "status": "pass",
+      "passed": true,
+      "evidence": "9 edge cases/pitfalls evidenced (need 3+): 3 distinct marker terms (['exception*', 'failing to', 'complication*']), 9 enumerated items in edge-case/pitfall sections"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "eval_id": 7,
+  "eval_name": "historical-risk-fund-assessment",
+  "prompt": "I'm looking at a fund that returned 12% annualized over the last 5 years with a standard deviation of 18%. The max drawdown was -32% during COVID. How do I assess whether the risk-adjusted returns are actually good, and what metrics should I use to compare it against its benchmark?",
+  "assertions": [
+    {"text": "Calculates or discusses Sharpe ratio using provided return and volatility data", "type": "contains_concept"},
+    {"text": "Analyzes the -32% max drawdown in context (severity, recovery)", "type": "contains_concept"},
+    {"text": "Mentions Sortino ratio or downside risk metrics", "type": "contains_concept"},
+    {"text": "Provides 3+ specific risk metrics with explanations", "type": "depth_check"},
+    {"text": "Analysis is grounded in historical/realized data, not forward projections", "type": "conceptual_focus"}
+  ]
+}

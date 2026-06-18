@@ -1,0 +1,50 @@
+{
+  "eval_id": 4,
+  "eval_name": "fee-billing-quarterly-process",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "Provides proration formula or methodology for partial-quarter accounts",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'prorat*' -> \"...quarterly billing in advance on prior quarter-end AUM, with proration for new accounts and refunds for mid-quarter terminations -...\" | 'formula*' -> \"...advance-billed accounts terminated mid-quarter, the refund formula is: ``` Refund = Quarterly Fee * (Remaining Days from Term...\""
+    },
+    {
+      "text": "Addresses mid-quarter termination refund calculation",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'refund*' -> \"...prior quarter-end AUM, with proration for new accounts and refunds for mid-quarter terminations -- is the most common RIA bill...\" | 'terminat*' -> \"...with proration for new accounts and refunds for mid-quarter terminations -- is the most common RIA billing model. Here is how to str...\""
+    },
+    {
+      "text": "Discusses billing system mechanics (custodian deduction, valuation dates)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'custodi*' -> \"...ess day of the prior quarter (your valuation date) from the custodian or portfolio management system. Apply any contractual exclu...\" | 'debit*' -> \".... Apply any contractual exclusions (cash exclusions, margin debit netting, held-away asset inclusion). **3. Aggregate Househ...\" | 'valuation date*' -> \"...lues as of the last business day of the prior quarter (your valuation date) from the custodian or portfolio management system. Apply a...\""
+    },
+    {
+      "text": "Identifies 4+ distinct edge cases or pitfalls in billing",
+      "status": "pass",
+      "passed": true,
+      "evidence": "9 edge cases/pitfalls evidenced (need 4+): 2 distinct marker terms (['edge case*', 'exception*']), 9 enumerated items in edge-case/pitfall sections"
+    },
+    {
+      "text": "Outlines 5+ steps or phases in the billing process",
+      "status": "pass",
+      "passed": true,
+      "evidence": "12 distinct enumerated steps/phases (need 5+)."
+    },
+    {
+      "text": "Focuses on operational billing implementation, not regulatory disclosure",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Focus direction correct \u2014 required topic(s) ['billing']: 67 hits (bill x4, billing x22, debit* x14, invoice* x1, prorat* x11, reconcil* x3) vs excluded topic(s) ['disclosure']: 5 hits (disclos* x3, item 5 x1, part 2a x1)"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

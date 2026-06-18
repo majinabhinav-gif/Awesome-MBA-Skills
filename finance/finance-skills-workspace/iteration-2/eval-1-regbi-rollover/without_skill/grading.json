@@ -1,0 +1,44 @@
+{
+  "eval_id": 1,
+  "eval_name": "regbi-rollover-recommendation",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Mentions Reg BI by name",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'reg bi' -> \"...in your broker-dealer capacity**, Regulation Best Interest (Reg BI) applies. Under Reg BI (effective June 30, 2020), you must...\""
+    },
+    {
+      "text": "Cites the four Reg BI obligations",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'reg bi' -> \"...in your broker-dealer capacity**, Regulation Best Interest (Reg BI) applies. Under Reg BI (effective June 30, 2020), you must...\" | 'disclosure' -> \"...sts ahead of theirs. Reg BI has four component obligations: Disclosure, Care, Conflict of Interest, and Compliance. 2. **If you a...\" | 'care' -> \"# Rollover Recommendation: Standard of Care and Documentation Requirements ## Which Standard of Care A...\" | 'conflict*' -> \"...s. Reg BI has four component obligations: Disclosure, Care, Conflict of Interest, and Compliance. 2. **If you are recommending...\" | 'compliance' -> \"...nt obligations: Disclosure, Care, Conflict of Interest, and Compliance. 2. **If you are recommending the rollover in your investm...\""
+    },
+    {
+      "text": "Mentions PTE 2020-02 or DOL prohibited transaction exemption",
+      "status": "fail",
+      "passed": false,
+      "evidence": "Missing concept group(s): pte 2020-02/pte 2020/prohibited transaction exemption."
+    },
+    {
+      "text": "Discusses reasonably available alternatives analysis",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'alternative*' -> \"...t options - Comparison of services - Consideration of alternatives (stay in plan, roll to new employer plan, Roth conversion,...\" | 'staying in' -> \"...duty both require you to consider reasonable alternatives \u2014 staying in the plan, rolling to a new employer's plan, doing a partial...\""
+    },
+    {
+      "text": "Does not incorrectly apply pure fiduciary standard without acknowledging BD capacity",
+      "status": "pass",
+      "passed": true,
+      "evidence": "BD capacity acknowledged via 'reg bi' -> \"...in your broker-dealer capacity**, Regulation Best Interest (Reg BI) applies. Under Reg BI (effective June 30, 2020), you must...\""
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 1,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 0.8
+  }
+}

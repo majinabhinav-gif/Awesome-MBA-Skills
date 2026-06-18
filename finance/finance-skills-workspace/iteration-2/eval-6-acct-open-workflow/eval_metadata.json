@@ -1,0 +1,13 @@
+{
+  "eval_id": 6,
+  "eval_name": "account-opening-workflow-nigo",
+  "prompt": "Our NIGO rate for new accounts submitted to Schwab is running at 28%. Most rejections are missing signatures, incorrect entity titling, and incomplete beneficiary designations. I need to redesign our account opening workflow to get this under 10%. What should the new process look like?",
+  "assertions": [
+    {"text": "Addresses NIGO root cause analysis and specific rejection patterns", "type": "contains_concept"},
+    {"text": "Proposes workflow validation gates or pre-submission checks", "type": "contains_concept"},
+    {"text": "Discusses operational process improvement (not just compliance requirements)", "type": "conceptual_focus"},
+    {"text": "Mentions specific custodian integration or submission mechanics", "type": "contains_concept"},
+    {"text": "Outlines 5+ steps or phases in the redesigned workflow", "type": "depth_check"},
+    {"text": "Identifies 4+ distinct edge cases or pitfalls in account opening", "type": "depth_check"}
+  ]
+}

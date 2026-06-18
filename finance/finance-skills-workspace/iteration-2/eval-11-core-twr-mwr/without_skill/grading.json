@@ -1,0 +1,38 @@
+{
+  "eval_id": 11,
+  "eval_name": "core-twr-mwr-calculation",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "TWR calculation is approximately 24% (range 23.5-24.5%)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Found 24.06% within [23.5%, 24.5%] -> \"...0788) - 1 TWR = 1.15 x 1.0788 - 1 TWR = 1.24061 - 1 **TWR = 24.06%** This is the annualized-equivalent one-year return since...\""
+    },
+    {
+      "text": "MWR/IRR is lower than TWR",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'mwr' -> \"# Time-Weighted Return (TWR) vs. Money-Weighted Return (MWR/IRR) ## Setup - **t=0:** Invest $100,000 - **t=6 months:*...\" | 'twr' -> \"# Time-Weighted Return (TWR) vs. Money-Weighted Return (MWR/IRR) ## Setup - **t=0:**...\" | 'lower' -> \"....06%** while the MWR is approximately **22.6%**. The MWR is lower, and the reason comes down to the timing of the cash flow r...\""
+    },
+    {
+      "text": "Shows sub-period return calculations step by step",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'sub-period*' -> \"...fund's performance independent of cash flows by compounding sub-period returns. **Sub-period 1 (months 0-6):** - Beginning value...\" | '15%' -> \"...up - **t=0:** Invest $100,000 - **t=6 months:** Fund is up 15%, so value = $115,000. Client adds $50,000, bringing the tot...\""
+    },
+    {
+      "text": "Identifies TWR as manager skill, MWR as investor experience",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'manager*' -> \"...TWR is the industry standard (per GIPS) for evaluating fund manager performance, since managers typically do not control the ti...\" | 'investor*' -> \"...s by the amount of money invested. It answers: \"How did the investor's actual dollars perform?\" 3. **In this case, the client a...\""
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  }
+}

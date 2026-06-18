@@ -1,0 +1,50 @@
+{
+  "eval_id": 6,
+  "eval_name": "account-opening-workflow-nigo",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Addresses NIGO root cause analysis and specific rejection patterns",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'nigo' -> \"# Redesigning Your Account Opening Workflow to Reduce NIGO Rate from 28% to Under 10% A 28% NIGO rate is significantl...\" | 'root cause*' -> \"...rocess redesign. Here is a structured approach. --- ## 1. Root Cause Analysis of Your Top Three Defects Before redesigning, und...\""
+    },
+    {
+      "text": "Proposes workflow validation gates or pre-submission checks",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'validat*' -> \"...dvisors or ops staff manually keying account titles without validation against the entity's legal documents - Confusion between tr...\""
+    },
+    {
+      "text": "Discusses operational process improvement (not just compliance requirements)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Focus direction correct \u2014 required topic(s) ['process_improvement']: 41 hits (automat* x1, checklist* x7, nigo x16, process* x3, qc x3, root cause* x1) vs excluded topic(s) ['compliance_requirements']: 1 hits (suitability x1)"
+    },
+    {
+      "text": "Mentions specific custodian integration or submission mechanics",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'schwab' -> \"...iary sections treated as optional when they are required by Schwab for retirement accounts - Missing contingent beneficiaries...\" | 'electronic submission' -> \"...te and tracking information. - If using Schwab Alliance for electronic submission, use their validation tools to catch any remaining field-le...\""
+    },
+    {
+      "text": "Outlines 5+ steps or phases in the redesigned workflow",
+      "status": "pass",
+      "passed": true,
+      "evidence": "5 distinct enumerated steps/phases (need 5+). e.g. ['...flow: Five-Stage Process ### Stage 1: Client Data Gathering (Pre-F...', '...ted or explicitly waived ### Stage 2: Document Assembly and Pre-Po...', '...ic to that account type. ### Stage 3: Quality Control Review (The...']"
+    },
+    {
+      "text": "Identifies 4+ distinct edge cases or pitfalls in account opening",
+      "status": "fail",
+      "passed": false,
+      "evidence": "Only 2 edge cases/pitfalls evidenced (need 4+): 2 distinct marker terms (['edge case*', 'exception*']), 0 enumerated items in edge-case/pitfall sections"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "manual_review": 0,
+    "total": 6,
+    "pass_rate": 0.8333333333333334
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "eval_id": 9,
+  "eval_name": "stp-automation-acat-transfers",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Defines or calculates STP rate and sets improvement targets",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'stp' -> \"# Automating ACATS Transfers: Raising STP Rate from ~40% to 90%+ ## Understanding the Problem A 60%...\" | '90%' -> \"# Automating ACATS Transfers: Raising STP Rate from ~40% to 90%+ ## Understanding the Problem A 60% manual intervention r...\""
+    },
+    {
+      "text": "Identifies exception categories and auto-resolution patterns",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'exception*' -> \"...irm. Each step either succeeds (moves to next) or routes to exception queue with context. - **Exception management UI.** For the...\" | 'categor*' -> \"...ing) is achievable, but it requires addressing each failure category systematically rather than trying to build one monolithic a...\" | 'auto-resol*' -> \"...clearing firm, or a vendor like Refinitiv or Bloomberg) to auto-resolve new or unfamiliar securities. Fuzzy matching on security de...\""
+    },
+    {
+      "text": "Discusses API vs RPA integration approaches for legacy systems",
+      "status": "fail",
+      "passed": false,
+      "evidence": "Missing concept group(s): rpa/robotic process automation/screen-scrap*/screen scrap*. Found: 'api*' -> \"...firm offers the equivalent class. 4. **Data enrichment via API.** Where your systems need fields the ACATS feed does not c...\""
+    },
+    {
+      "text": "Outlines 5+ steps or phases in the automation approach",
+      "status": "fail",
+      "passed": false,
+      "evidence": "Only 4 distinct enumerated steps/phases (need 5+). e.g. ['...## Recommended Approach ### Phase 1: Instrument and Categorize (W...', '...for 80% of the failures. ### Phase 2: Build the Matching and Enric...', '...eporting Service (CBRS). ### Phase 3: Workflow Orchestration (Week...']"
+    },
+    {
+      "text": "Identifies 3+ distinct edge cases or pitfalls in transfer automation",
+      "status": "pass",
+      "passed": true,
+      "evidence": "4 edge cases/pitfalls evidenced (need 3+): 2 distinct marker terms (['edge case*', 'exception*']), 4 enumerated items in edge-case/pitfall sections"
+    },
+    {
+      "text": "Focus is on end-to-end automation and exception handling, not task routing or approvals",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Focus direction correct \u2014 required topic(s) ['automation']: 38 hits (auto-resol* x1, automat* x23, exception* x3, stp x9, straight through x1, straight-through x1) vs excluded topic(s) ['routing_approvals']: 3 hits (escalat* x1, queue* x1, route* x1)"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "manual_review": 0,
+    "total": 6,
+    "pass_rate": 0.6666666666666666
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "finance-skills",
+  "description": "Claude Code skill plugins for financial services \u2014 84 skills across 7 domain plugins covering investment management, compliance, advisory practice, trading, and operations.",
+  "owner": {
+    "name": "Joel Lewis",
+    "email": "joel@eleazar.dev"
+  },
+  "plugins": [
+    {
+      "name": "core",
+      "description": "Mathematical and statistical foundations required by all other plugins. Always installed \u2014 every plugin implicitly depends on core.",
+      "version": "1.0.0",
+      "source": "./plugins/core",
+      "author": {
+        "name": "Joel Lewis",
+        "email": "joel@eleazar.dev"
+      },
+      "category": "finance",
+      "keywords": [
+        "math",
+        "statistics",
+        "foundations"
+      ]
+    },
+    {
+      "name": "wealth-management",
+      "description": "Investment knowledge for personal and institutional wealth management. Covers risk measurement, asset classes, valuation, portfolio construction, policy and planning, personal finance, behavioral finance, and reporting.",
+      "version": "1.0.0",
+      "source": "./plugins/wealth-management",
+      "author": {
+        "name": "Joel Lewis",
+        "email": "joel@eleazar.dev"
+      },
+      "category": "finance",
+      "keywords": [
+        "investment",
+        "portfolio",
+        "risk",
+        "personal-finance",
+        "asset-classes"
+      ]
+    },
+    {
+      "name": "compliance",
+      "description": "US securities regulatory guidance for broker-dealers and investment advisers. Covers FINRA, SEC, ERISA, FinCEN, and CFA Institute GIPS requirements. Guidance-only \u2014 no Python scripts.",
+      "version": "1.0.0",
+      "source": "./plugins/compliance",
+      "author": {
+        "name": "Joel Lewis",
+        "email": "joel@eleazar.dev"
+      },
+      "category": "finance",
+      "keywords": [
+        "compliance",
+        "regulatory",
+        "SEC",
+        "FINRA",
+        "ERISA",
+        "AML"
+      ]
+    },
+    {
+      "name": "advisory-practice",
+      "description": "Advisor-facing systems and workflows. Teaches Claude how advisor platforms work so it can help design, evaluate, or integrate with them. Covers the full advisor workflow from onboarding through reporting.",
+      "version": "1.0.0",
+      "source": "./plugins/advisory-practice",
+      "author": {
+        "name": "Joel Lewis",
+        "email": "joel@eleazar.dev"
+      },
+      "category": "finance",
+      "keywords": [
+        "advisor",
+        "wealth-management",
+        "front-office",
+        "crm",
+        "billing"
+      ]
+    },
+    {
+      "name": "trading-operations",
+      "description": "Order lifecycle from entry through settlement, plus operational and counterparty risk. Serves advisor, algorithmic, and client-direct trading contexts.",
+      "version": "1.0.0",
+      "source": "./plugins/trading-operations",
+      "author": {
+        "name": "Joel Lewis",
+        "email": "joel@eleazar.dev"
+      },
+      "category": "finance",
+      "keywords": [
+        "trading",
+        "order-management",
+        "settlement",
+        "execution",
+        "risk"
+      ]
+    },
+    {
+      "name": "client-operations",
+      "description": "Back-office account operations and servicing workflows. Covers the full account lifecycle from opening through maintenance, transfers, reconciliation, and corporate actions.",
+      "version": "1.0.0",
+      "source": "./plugins/client-operations",
+      "author": {
+        "name": "Joel Lewis",
+        "email": "joel@eleazar.dev"
+      },
+      "category": "finance",
+      "keywords": [
+        "back-office",
+        "account-management",
+        "transfers",
+        "reconciliation",
+        "corporate-actions"
+      ]
+    },
+    {
+      "name": "data-integration",
+      "description": "Data foundations that every financial system depends on. Covers reference data management, market data feeds, integration patterns for financial systems, and data quality governance.",
+      "version": "1.0.0",
+      "source": "./plugins/data-integration",
+      "author": {
+        "name": "Joel Lewis",
+        "email": "joel@eleazar.dev"
+      },
+      "category": "finance",
+      "keywords": [
+        "data",
+        "reference-data",
+        "market-data",
+        "integration",
+        "data-quality"
+      ]
+    }
+  ]
+}

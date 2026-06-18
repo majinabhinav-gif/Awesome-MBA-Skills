@@ -1,0 +1,44 @@
+{
+  "eval_id": 1,
+  "eval_name": "regbi-rollover-recommendation",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Mentions Reg BI by name",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'reg bi' -> \"...Acting in Broker-Dealer Capacity: Regulation Best Interest (Reg BI) If you are recommending the rollover in your capacity as...\""
+    },
+    {
+      "text": "Cites the four Reg BI obligations",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'reg bi' -> \"...Acting in Broker-Dealer Capacity: Regulation Best Interest (Reg BI) If you are recommending the rollover in your capacity as...\" | 'disclosure' -> \"...r's interest. Reg BI has four component obligations: 1. **Disclosure Obligation** -- You must provide the customer with a **Form...\" | 'care' -> \"# Rollover Recommendation: Standard of Care and Documentation Requirements ## Which Standard Applies...\" | 'conflict*' -> \"...scope and terms of the relationship, including fees, costs, conflicts of interest, and the type and scope of services. 2. **Care...\" | 'compliance' -> \"...licts of interest associated with the recommendation. 4. **Compliance Obligation** -- You must establish, maintain, and enforce w...\""
+    },
+    {
+      "text": "Mentions PTE 2020-02 or DOL prohibited transaction exemption",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'pte 2020-02' -> \"...ervice at age 55+ penalty-free withdrawal exception - **DOL PTE 2020-02**: If any retirement plan assets are involved and you are r...\""
+    },
+    {
+      "text": "Discusses reasonably available alternatives analysis",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'alternative*' -> \"...ly**, Reg BI requires you to consider the 401(k) plan as an alternative -- that is, you must evaluate whether staying in the plan i...\" | 'staying in' -> \"...lan as an alternative -- that is, you must evaluate whether staying in the plan is actually the better option. You cannot simply a...\""
+    },
+    {
+      "text": "Does not incorrectly apply pure fiduciary standard without acknowledging BD capacity",
+      "status": "pass",
+      "passed": true,
+      "evidence": "BD capacity acknowledged via 'reg bi' -> \"...Acting in Broker-Dealer Capacity: Regulation Best Interest (Reg BI) If you are recommending the rollover in your capacity as...\""
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

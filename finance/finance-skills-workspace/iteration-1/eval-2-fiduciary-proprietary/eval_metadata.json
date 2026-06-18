@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "eval_name": "fiduciary-proprietary-fund-conflict",
+  "prompt": "We're an RIA and one of our advisers just recommended a proprietary fund to a client when a cheaper third-party option with similar performance exists. The client is a retired teacher, moderate risk tolerance, $600K portfolio. Is there a fiduciary issue here?",
+  "assertions": [
+    {"text": "Applies IA Act Section 206 fiduciary framework", "type": "contains_concept"},
+    {"text": "Analyzes both duty of care and duty of loyalty", "type": "contains_concept"},
+    {"text": "Identifies proprietary fund as conflict of interest", "type": "contains_concept"},
+    {"text": "Discusses cost differential materiality", "type": "contains_concept"},
+    {"text": "Does not apply FINRA suitability as primary standard", "type": "absence"}
+  ]
+}

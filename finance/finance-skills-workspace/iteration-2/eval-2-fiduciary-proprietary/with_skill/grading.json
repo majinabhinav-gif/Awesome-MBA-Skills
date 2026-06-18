@@ -1,0 +1,44 @@
+{
+  "eval_id": 2,
+  "eval_name": "fiduciary-proprietary-fund-conflict",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "Applies IA Act Section 206 fiduciary framework",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'section 206' -> \"...ur firm owes a fiduciary duty under Investment Advisers Act Section 206, which includes both a duty of care and a duty of loyalty....\" | 'fiduciary' -> \"# Fiduciary Analysis: Proprietary Fund Recommendation by RIA Adviser #...\""
+    },
+    {
+      "text": "Analyzes both duty of care and duty of loyalty",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'duty of care' -> \"...Investment Advisers Act Section 206, which includes both a duty of care and a duty of loyalty. Recommending a proprietary fund when...\" | 'duty of loyalty' -> \"...s Act Section 206, which includes both a duty of care and a duty of loyalty. Recommending a proprietary fund when a cheaper third-party...\""
+    },
+    {
+      "text": "Identifies proprietary fund as conflict of interest",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'proprietary' -> \"# Fiduciary Analysis: Proprietary Fund Recommendation by RIA Adviser ## Short Answer Yes, t...\" | 'conflict*' -> \"...client's. Recommending a proprietary fund creates a layered conflict: the firm earns both the advisory fee and revenue at the fu...\""
+    },
+    {
+      "text": "Discusses cost differential materiality",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'cost*' -> \"...teacher with moderate risk tolerance and a $600K portfolio, cost efficiency is material \u2014 every basis point of unnecessary e...\" | 'differential*' -> \"...y fee drag. For a moderate-risk-tolerance retiree, the cost differential between the proprietary fund and the cheaper alternative co...\""
+    },
+    {
+      "text": "Does not apply FINRA suitability as primary standard",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Fiduciary/best-interest framing dominant or equal \u2014 suitability terms: 2 (suitability x2) vs fiduciary/best-interest terms: 21 (fiduciary x8, best interest x5, duty of loyalty x2, duty of care x4, section 206 x1, advisers act x1)"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

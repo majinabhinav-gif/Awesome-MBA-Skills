@@ -1,0 +1,13 @@
+{
+  "eval_id": 4,
+  "eval_name": "fee-billing-quarterly-process",
+  "prompt": "I need to set up our quarterly billing process. We bill in advance on AUM as of the last business day of the prior quarter, with new accounts prorated from their funding date. When a client terminates mid-quarter we refund the unused portion. How should I structure the billing calculation and what edge cases do I need to handle?",
+  "assertions": [
+    {"text": "Provides proration formula or methodology for partial-quarter accounts", "type": "contains_concept"},
+    {"text": "Addresses mid-quarter termination refund calculation", "type": "contains_concept"},
+    {"text": "Discusses billing system mechanics (custodian deduction, valuation dates)", "type": "contains_concept"},
+    {"text": "Identifies 4+ distinct edge cases or pitfalls in billing", "type": "depth_check"},
+    {"text": "Outlines 5+ steps or phases in the billing process", "type": "depth_check"},
+    {"text": "Focuses on operational billing implementation, not regulatory disclosure", "type": "conceptual_focus"}
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "eval_id": 13,
+  "eval_name": "wm-rebalance-with-tlh-coordination",
+  "variant": "without_skill",
+  "assertion_results": [
+    {
+      "text": "Identifies that the 5% band has been breached (68% > 65%)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'band*' -> \"...| | Equity overweight | +8 percentage points | | Threshold band | +/- 5% | | Unrealized losses | ~$15,000 in select equity...\" | 'exceed*' -> \"...ould You Rebalance? **Yes.** Your equity allocation at 68% exceeds the upper threshold of 65% (60% target + 5% band). You are...\" | '65%' -> \"...our equity allocation at 68% exceeds the upper threshold of 65% (60% target + 5% band). You are 3 percentage points beyond...\""
+    },
+    {
+      "text": "Calculates approximate rebalance trade size (~$64K)",
+      "status": "pass",
+      "passed": true,
+      "evidence": "Found $64,000 within [$54,400, $73,600] -> \"...0 - **Amount to shift from stocks to bonds:** approximately $64,000 ## Coordinating Rebalancing with Tax-Loss Harvesting Since...\""
+    },
+    {
+      "text": "Recommends harvesting the $15K loss as part of the rebalance",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'harvest*' -> \"# Rebalancing and Tax-Loss Harvesting Analysis ## Current Situation | Metric | Value | |---|---...\" | '$15,000' -> \"...points | | Threshold band | +/- 5% | | Unrealized losses | ~$15,000 in select equity positions | ## Should You Rebalance? **Y...\""
+    },
+    {
+      "text": "Warns about wash-sale rules",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'wash sale*' -> \"...from $256,000 up to the $320,000 target. ### Step 4: Avoid Wash Sale Violations If you want to maintain similar equity exposure...\""
+    },
+    {
+      "text": "Mentions replacement security selection",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'substitute*' -> \"...maintain exposure while respecting the wash sale rule: - **Substitute with a similar but not identical fund.** For example, if yo...\""
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

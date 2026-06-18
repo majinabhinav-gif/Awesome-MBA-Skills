@@ -1,0 +1,44 @@
+{
+  "eval_id": 1,
+  "eval_name": "regbi-rollover-recommendation",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "Mentions Reg BI by name",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'reg bi' -> \"...our broker-dealer capacity:** SEC Regulation Best Interest (Reg BI, 17 CFR 240.15l-1) applies. Reg BI is a point-of-recommenda...\""
+    },
+    {
+      "text": "Cites the four Reg BI obligations",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'reg bi' -> \"...our broker-dealer capacity:** SEC Regulation Best Interest (Reg BI, 17 CFR 240.15l-1) applies. Reg BI is a point-of-recommenda...\" | 'disclosure' -> \"...-- moving clients between BD and IA capacity without clear disclosure, potentially to exploit the less demanding standard. This c...\" | 'care' -> \"# Standard of Care and Documentation for a 401(k)-to-IRA Rollover at a Dual-Re...\" | 'conflict*' -> \"...options, particularly if lower-cost alternatives exist 6. **Conflict of interest disclosure** -- how you and the firm are compen...\" | 'compliance' -> \"...opting anti-conflict policies, and conducting retrospective compliance reviews. ## Key Risk Flag for This Client At age 58, the...\""
+    },
+    {
+      "text": "Mentions PTE 2020-02 or DOL prohibited transaction exemption",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'pte 2020-02' -> \"...mendations can trigger), you may also need to comply with **PTE 2020-02** conditions if you are receiving compensation that would o...\""
+    },
+    {
+      "text": "Discusses reasonably available alternatives analysis",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'alternative*' -> \"...es rollovers and requires you to evaluate and document four alternatives: 1. **Stay in the current 401(k) plan** -- this is a \"reas...\" | 'reasonably available' -> \"...ives: 1. **Stay in the current 401(k) plan** -- this is a \"reasonably available alternative\" that must be considered 2. **Roll to a new emp...\""
+    },
+    {
+      "text": "Does not incorrectly apply pure fiduciary standard without acknowledging BD capacity",
+      "status": "pass",
+      "passed": true,
+      "evidence": "BD capacity acknowledged via 'reg bi' -> \"...our broker-dealer capacity:** SEC Regulation Best Interest (Reg BI, 17 CFR 240.15l-1) applies. Reg BI is a point-of-recommenda...\""
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

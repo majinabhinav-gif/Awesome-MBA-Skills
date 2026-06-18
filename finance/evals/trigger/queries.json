@@ -1,0 +1,675 @@
+{
+  "description": "Trigger-accuracy queries for the eight highest-collision skill clusters. Each query is labeled with the skill that SHOULD trigger, or null if no skill in the cluster should trigger (near-miss queries). Queries follow agentskills.io guidance: realistic phrasing, casual wording, file paths, and occasional typos.",
+  "pass_criteria": {
+    "should_trigger": "expected skill invoked in > 0.5 of runs",
+    "should_not_trigger": "no cluster skill invoked in >= 0.5 of runs (i.e. cluster trigger rate < 0.5)"
+  },
+  "runs_per_query": 3,
+  "queries": [
+    {
+      "query": "I'm onboarding a new planning client next week — what data should I collect before building their financial plan?",
+      "expected_skill": "financial-planning-workflow",
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "Walk me through a comprehensive financial planning engagement from the discovery meeting to plan delivery",
+      "expected_skill": "financial-planning-workflow",
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "How often should we revisit a client's financial plan, and what should the annual plan review cover?",
+      "expected_skill": "financial-planning-workflow",
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "My client just had a baby and wants to update their goals — how do I rework their plan?",
+      "expected_skill": "financial-planning-workflow",
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "whats the right order when building a plan — cash flow analysis first or retirement projections?",
+      "expected_skill": "financial-planning-workflow",
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "What goal-prioritization framework should I use when a couple disagrees about retiring early vs funding college?",
+      "expected_skill": "financial-planning-workflow",
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "How do I sync account balances from our portfolio management system into eMoney?",
+      "expected_skill": "financial-planning-integration",
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "We use MoneyGuidePro and Redtail — what's the best way to integrate them so planning data flows automatically?",
+      "expected_skill": "financial-planning-integration",
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "Our advisors keep re-keying client data between the CRM and the planning tool. How should we architect the integration?",
+      "expected_skill": "financial-planning-integration",
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "Does eMoney have an API for pulling plan data into our reporting dashboard at reports/planning_summary.py?",
+      "expected_skill": "financial-planning-integration",
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "I'm evaluating planning software partly on how well it connects to Orion — which integration points matter?",
+      "expected_skill": "financial-planning-integration",
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "Held-away 401k balances keep going stale in our planning software — how do aggregation feeds usually handle this?",
+      "expected_skill": "financial-planning-integration",
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "Help me plan the financial section of my business school application essay",
+      "expected_skill": null,
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "Can you integrate this logging library into my Express app in src/server.ts?",
+      "expected_skill": null,
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "I need a financial model for my startup's seed round pitch",
+      "expected_skill": null,
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "How should I plan my week to fit in more client meetings?",
+      "expected_skill": null,
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "Write a Python script that integrates two CSVs of transactions into one file",
+      "expected_skill": null,
+      "cluster": "financial-planning-workflow-vs-integration"
+    },
+    {
+      "query": "Our ACAT transfers need manual touches 40% of the time — how do I push our straight-through processing rate up?",
+      "expected_skill": "stp-automation",
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "What exception categories should I define when automating incoming account transfer processing?",
+      "expected_skill": "stp-automation",
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "We want to measure the STP rate for new account funding — how is it usually calculated and benchmarked?",
+      "expected_skill": "stp-automation",
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "Manual re-keying between our transfer agent system and books-and-records is killing us — what are the automation options?",
+      "expected_skill": "stp-automation",
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "Design an approval chain where beneficiary changes need two sign-offs including a compliance review",
+      "expected_skill": "workflow-automation",
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "How should I set SLA targets and escalation rules for our account maintenance task queue?",
+      "expected_skill": "workflow-automation",
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "I need a state machine for routing client service requests to different ops teams",
+      "expected_skill": "workflow-automation",
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "whats the best way to build an aproval workflow with delegation for when a supervisor is out of office?",
+      "expected_skill": "workflow-automation",
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "Our NIGO rate at Fidelity is 22%, mostly bad entity titling — how do I redesign the account opening process?",
+      "expected_skill": "account-opening-workflow",
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "What pre-submission validation should we run before sending new account paperwork to the custodian?",
+      "expected_skill": "account-opening-workflow",
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "Map out the new account opening process from signed advisory agreement to funded account",
+      "expected_skill": "account-opening-workflow",
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "How do we cut down on rejected trust account applications at Schwab?",
+      "expected_skill": "account-opening-workflow",
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "Automate my CI pipeline in .github/workflows/ci.yml with GitHub Actions",
+      "expected_skill": null,
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "How do I open a bank account online as a regular consumer?",
+      "expected_skill": null,
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "Write a cron job that automates nightly database backups",
+      "expected_skill": null,
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "What's the workflow for renewing a passport?",
+      "expected_skill": null,
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "Set up an n8n automation that posts new RSS items to Slack",
+      "expected_skill": null,
+      "cluster": "stp-vs-workflow-vs-account-opening"
+    },
+    {
+      "query": "Can we post client testimonials on our firm's Instagram under the SEC marketing rule?",
+      "expected_skill": "advertising-compliance",
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "Review this draft LinkedIn ad for our advisory firm — any compliance problem with saying we 'beat the market'?",
+      "expected_skill": "advertising-compliance",
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "What disclosures do we need when showing hypothetical performance in a prospect pitch deck?",
+      "expected_skill": "advertising-compliance",
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "Are paid endorsements from influencers allowed for an RIA under the marketing rule?",
+      "expected_skill": "advertising-compliance",
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "our marketing team wants to say 'guaranteed returns' in an email blast — thats a problem right?",
+      "expected_skill": "advertising-compliance",
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "Do past specific recommendations in a newsletter trigger advertising rules for our firm?",
+      "expected_skill": "advertising-compliance",
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "How do I build GIPS-compliant composites for our SMA strategies?",
+      "expected_skill": "gips-compliance",
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "What does it take for our firm to claim GIPS compliance — including verification?",
+      "expected_skill": "gips-compliance",
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "How should terminated portfolios be handled in composite performance under GIPS?",
+      "expected_skill": "gips-compliance",
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "Do we need to show both gross-of-fee and net-of-fee returns in a GIPS report?",
+      "expected_skill": "gips-compliance",
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "We're getting our track record verified — walk me through GIPS carve-out rules",
+      "expected_skill": "gips-compliance",
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "Whats the minimum history we need to present when first claiming GIPS complaince?",
+      "expected_skill": "gips-compliance",
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "Write ad copy for our new SaaS product launch",
+      "expected_skill": null,
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "What are Google Ads policy rules for healthcare advertisers?",
+      "expected_skill": null,
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "How do I measure ad campaign performance in GA4?",
+      "expected_skill": null,
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "Is our website cookie banner GDPR compliant?",
+      "expected_skill": null,
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "Make this banner ad image more eye-catching",
+      "expected_skill": null,
+      "cluster": "advertising-vs-gips-compliance"
+    },
+    {
+      "query": "What documents do I need to verify identity for a new brokerage client who is a green-card holder?",
+      "expected_skill": "know-your-customer",
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "How do we handle CIP for a custodial account opened for a minor?",
+      "expected_skill": "know-your-customer",
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "Walk me through customer due diligence requirements when onboarding a small business LLC",
+      "expected_skill": "know-your-customer",
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "A client refuses to give us their SSN — can we still open the account?",
+      "expected_skill": "know-your-customer",
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "what do we need to collect under the customer identification program for a foreign national?",
+      "expected_skill": "know-your-customer",
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "When does a trust account require beneficial ownership certification and who counts as a control person?",
+      "expected_skill": "know-your-customer",
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "A client deposited $9,500 in cash three days in a row — do we file a SAR?",
+      "expected_skill": "anti-money-laundering",
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "How should our transaction monitoring rules flag potential structuring?",
+      "expected_skill": "anti-money-laundering",
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "What goes into the annual AML independent test for a small broker-dealer?",
+      "expected_skill": "anti-money-laundering",
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "Explain the difference between a CTR and a SAR and when each gets filed",
+      "expected_skill": "anti-money-laundering",
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "Our AML officer flagged wires to a high-risk jurisdiction — what's the investigation process?",
+      "expected_skill": "anti-money-laundering",
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "whats the lookback period if we discover our monitoring missed suspicous activity?",
+      "expected_skill": "anti-money-laundering",
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "How do I know my customer demographics for marketing segmentation?",
+      "expected_skill": null,
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "Build a churn model in churn_model.ipynb to identify customers at risk of leaving",
+      "expected_skill": null,
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "What's the best CRM for tracking customer interactions?",
+      "expected_skill": null,
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "Explain how money laundering schemes work for my criminology class essay",
+      "expected_skill": null,
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "Our SaaS sign-up flow needs identity verification — recommend a vendor API",
+      "expected_skill": null,
+      "cluster": "kyc-vs-aml"
+    },
+    {
+      "query": "Which accounts should hold my REITs and munis — taxable or IRA? Classic asset location question",
+      "expected_skill": "tax-efficiency",
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "How do I sequence withdrawals across taxable, IRA, and Roth accounts to minimize lifetime taxes?",
+      "expected_skill": "tax-efficiency",
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "Are ETFs really more tax-efficient than mutual funds, and why?",
+      "expected_skill": "tax-efficiency",
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "Client is in the 35% bracket — how should that change what we hold in their taxable account?",
+      "expected_skill": "tax-efficiency",
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "I have $20K of unrealized losses in my index funds — how do I harvest them without triggering wash sales?",
+      "expected_skill": "tax-loss-harvesting",
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "What's a good replacement security for VTI if I sell it to harvest a loss?",
+      "expected_skill": "tax-loss-harvesting",
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "Does tax loss harvesting actually add value or is it just deferral?",
+      "expected_skill": "tax-loss-harvesting",
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "my robo advisor harvested losses in december — did my 401k contributions blow the wash sale window?",
+      "expected_skill": "tax-loss-harvesting",
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "My 60/40 portfolio drifted to 70/30 — should I rebalance now or wait?",
+      "expected_skill": "rebalancing",
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "Whats better, calendar rebalancing or threshold bands?",
+      "expected_skill": "rebalancing",
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "How wide should tolerance bands be for a five-asset-class portfolio?",
+      "expected_skill": "rebalancing",
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "Should I rebalance using new contributions instead of selling winners?",
+      "expected_skill": "rebalancing",
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "How do I file an extension for my personal tax return?",
+      "expected_skill": null,
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "Rebalance the load across our Kubernetes nodes in k8s/deployment.yaml",
+      "expected_skill": null,
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "Which EVs qualify for the clean vehicle tax credit this year?",
+      "expected_skill": null,
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "Harvest the data from data/sales.csv and summarize it",
+      "expected_skill": null,
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "Make my SQL query more efficient — it's scanning the whole table",
+      "expected_skill": null,
+      "cluster": "tax-efficiency-vs-tlh-vs-rebalancing"
+    },
+    {
+      "query": "Trace what happens to a limit order from entry through execution to settlement",
+      "expected_skill": "order-lifecycle",
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "Where in the order lifecycle does an order get validated against buying power?",
+      "expected_skill": "order-lifecycle",
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "What states can an order pass through between submission and fill, and how do partial fills work?",
+      "expected_skill": "order-lifecycle",
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "Explain how post-execution allocations work when a block trade fills for multiple client accounts",
+      "expected_skill": "order-lifecycle",
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "a client order is stuck in 'pending new' — which stage of the lifecycle is that and whats usually wrong?",
+      "expected_skill": "order-lifecycle",
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "How do I set up a FIX session with NYSE — logon sequence, heartbeats, the works?",
+      "expected_skill": "exchange-connectivity",
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "We keep getting FIX 35=3 session-level rejects from our broker — how do I debug them?",
+      "expected_skill": "exchange-connectivity",
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "What changed in execution report handling between FIX 4.2 and FIX 4.4?",
+      "expected_skill": "exchange-connectivity",
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "Design failover for our exchange gateway connections across two data centers",
+      "expected_skill": "exchange-connectivity",
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "How do FIX sequence number resets work after a disconnect mid-session?",
+      "expected_skill": "exchange-connectivity",
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "our fix engine logs show MsgSeqNum gaps after the resend request — whats the right recovery?",
+      "expected_skill": "exchange-connectivity",
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "How do I fix a bug in my OrderList React component in src/components/OrderList.tsx?",
+      "expected_skill": null,
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "What's the lifecycle of a React component with hooks?",
+      "expected_skill": null,
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "Connect my laptop to the office VPN — split tunnel config help",
+      "expected_skill": null,
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "Order my sprint tasks by priority and dependencies",
+      "expected_skill": null,
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "Quick fix for a flaky integration test in tests/test_api.py?",
+      "expected_skill": null,
+      "cluster": "order-lifecycle-vs-exchange-connectivity"
+    },
+    {
+      "query": "How should I choose between VWAP and TWAP algos for a 500,000 share order?",
+      "expected_skill": "trade-execution",
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "What does payment for order flow mean for the execution quality we deliver clients?",
+      "expected_skill": "trade-execution",
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "How do smart order routers decide between lit exchanges and dark pools?",
+      "expected_skill": "trade-execution",
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "How do I minimize market impact when liquidating a concentrated small-cap position?",
+      "expected_skill": "trade-execution",
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "whats slippage exactly and how do I measure implementation shortfall on our desk?",
+      "expected_skill": "trade-execution",
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "Set up our quarterly best execution review committee — what should it actually analyze?",
+      "expected_skill": "post-trade-compliance",
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "What does SEC Rule 606 require us to report about our order routing?",
+      "expected_skill": "post-trade-compliance",
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "Trade surveillance flagged possible front-running by a trader — what's the post-trade review process?",
+      "expected_skill": "post-trade-compliance",
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "How should we document best ex reviews for the annual compliance report?",
+      "expected_skill": "post-trade-compliance",
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "Which post-trade surveillance checks catch wash trades and marking the close?",
+      "expected_skill": "post-trade-compliance",
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "we got execution quality stats from our wholesaler — how do we evaluate them for the best ex committee?",
+      "expected_skill": "post-trade-compliance",
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "Best way to execute several shell scripts in parallel from a Makefile?",
+      "expected_skill": null,
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "How do I execute a zero-downtime database migration?",
+      "expected_skill": null,
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "What's the trade-in value for a 2019 Honda Civic?",
+      "expected_skill": null,
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "Is the annual HR compliance training mandatory for contractors?",
+      "expected_skill": null,
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "Execute this notebook top to bottom and tell me where it errors",
+      "expected_skill": null,
+      "cluster": "trade-execution-vs-post-trade-compliance"
+    },
+    {
+      "query": "Client got a Reg T margin call for $30K — what are their options and the deadline?",
+      "expected_skill": "margin-operations",
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "How is maintenance margin calculated when 80% of the account is in one stock?",
+      "expected_skill": "margin-operations",
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "What's the difference between Reg T initial margin and our house requirements?",
+      "expected_skill": "margin-operations",
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "Walk me through portfolio margin eligibility and how it differs from Reg T margin",
+      "expected_skill": "margin-operations",
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "when do we issue a day-trading margin call and how is day-trading buying power computed?",
+      "expected_skill": "margin-operations",
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "How should we size and monitor our counterparty exposure to our prime broker?",
+      "expected_skill": "counterparty-risk",
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "What happens to our client positions if our clearing firm files for bankruptcy?",
+      "expected_skill": "counterparty-risk",
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "How do CSAs and collateral thresholds mitigate OTC derivatives counterparty risk?",
+      "expected_skill": "counterparty-risk",
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "Set credit limits for the broker-dealers we face — which metrics matter?",
+      "expected_skill": "counterparty-risk",
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "Explain settlement risk versus replacement-cost risk when a counterparty defaults mid-trade",
+      "expected_skill": "counterparty-risk",
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "our repo desk wants a bigger line with a single dealer — how do I evaluate the conterparty exposure?",
+      "expected_skill": "counterparty-risk",
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "What's the margin property in CSS for centering a div?",
+      "expected_skill": null,
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "Our gross profit margin dropped 3% — analyze this P&L spreadsheet",
+      "expected_skill": null,
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "What margin should I add to my construction bid to stay competitive?",
+      "expected_skill": null,
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "Assess the supply-chain risk of depending on this one npm package",
+      "expected_skill": null,
+      "cluster": "margin-operations-vs-counterparty-risk"
+    },
+    {
+      "query": "Print margins get cut off when I export the report to PDF",
+      "expected_skill": null,
+      "cluster": "margin-operations-vs-counterparty-risk"
+    }
+  ]
+}

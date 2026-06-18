@@ -1,0 +1,44 @@
+{
+  "eval_id": 1,
+  "eval_name": "regbi-rollover-recommendation",
+  "variant": "with_skill",
+  "assertion_results": [
+    {
+      "text": "Mentions Reg BI by name",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'reg bi' -> \"...our broker-dealer capacity:** SEC Regulation Best Interest (Reg BI, 17 CFR 240.15l-1) applies. Reg BI is a point-of-recommenda...\""
+    },
+    {
+      "text": "Cites the four Reg BI obligations",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'reg bi' -> \"...our broker-dealer capacity:** SEC Regulation Best Interest (Reg BI, 17 CFR 240.15l-1) applies. Reg BI is a point-of-recommenda...\" | 'disclosure' -> \"...moving a customer between BD and IA capacity without clear disclosure, potentially to exploit the less demanding standard. You ca...\" | 'care' -> \"# 401(k) to IRA Rollover: Standard of Care and Documentation Requirements for a Dual-Registrant ## Wh...\" | 'conflict*' -> \"...disclosure, charge only reasonable compensation, adopt anti-conflict policies, and conduct retrospective compliance reviews. ##...\" | 'compliance' -> \"...on, adopt anti-conflict policies, and conduct retrospective compliance reviews. ## What You Must Document ### 1. Capacity Disclo...\""
+    },
+    {
+      "text": "Mentions PTE 2020-02 or DOL prohibited transaction exemption",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'pte 2020-02' -> \"...city. And regardless of which SEC/FINRA standard applies, **PTE 2020-02 (DOL Prohibited Transaction Exemption)** likely applies to...\""
+    },
+    {
+      "text": "Discusses reasonably available alternatives analysis",
+      "status": "pass",
+      "passed": true,
+      "evidence": "All concept groups evidenced: 'alternative*' -> \"...ivered before or at the time of the recommendation. ### 3. Alternatives Analysis (Required Under Both Standards) You must document...\" | 'reasonably available' -> \"...the current plan) is explicitly identified by the SEC as a reasonably available alternative that must be considered. ### 4. Factors Specif...\""
+    },
+    {
+      "text": "Does not incorrectly apply pure fiduciary standard without acknowledging BD capacity",
+      "status": "pass",
+      "passed": true,
+      "evidence": "BD capacity acknowledged via 'reg bi' -> \"...our broker-dealer capacity:** SEC Regulation Best Interest (Reg BI, 17 CFR 240.15l-1) applies. Reg BI is a point-of-recommenda...\""
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "manual_review": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

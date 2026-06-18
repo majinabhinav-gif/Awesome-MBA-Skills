@@ -1,0 +1,12 @@
+{
+  "eval_id": 1,
+  "eval_name": "regbi-rollover-recommendation",
+  "prompt": "My client wants to roll their 401k into an IRA with us. We're a dual-registrant — I handle some accounts as a broker and some as an adviser. Which standard of care applies to this rollover recommendation, and what documentation do I need to keep? The account is about $340K and they're 58 years old.",
+  "assertions": [
+    {"text": "Mentions Reg BI by name", "type": "contains_concept"},
+    {"text": "Cites the four Reg BI obligations", "type": "contains_concept"},
+    {"text": "Mentions PTE 2020-02 or DOL prohibited transaction exemption", "type": "contains_concept"},
+    {"text": "Discusses reasonably available alternatives analysis", "type": "contains_concept"},
+    {"text": "Does not incorrectly apply pure fiduciary standard without acknowledging BD capacity", "type": "absence"}
+  ]
+}

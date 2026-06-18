@@ -1,0 +1,12 @@
+{
+  "eval_id": 13,
+  "eval_name": "wm-rebalance-with-tlh-coordination",
+  "prompt": "I have a taxable portfolio worth $800K that has drifted from its 60/40 target to 68/32 stocks/bonds. My threshold band is +/- 5%. I also have about $15K in unrealized losses in some equity positions. Should I rebalance, and if so, how should I coordinate with tax-loss harvesting?",
+  "assertions": [
+    {"text": "Identifies that the 5% band has been breached (68% > 65%)", "type": "contains_concept"},
+    {"text": "Calculates approximate rebalance trade size (~$64K)", "type": "numerical_accuracy"},
+    {"text": "Recommends harvesting the $15K loss as part of the rebalance", "type": "contains_concept"},
+    {"text": "Warns about wash-sale rules", "type": "contains_concept"},
+    {"text": "Mentions replacement security selection", "type": "contains_concept"}
+  ]
+}

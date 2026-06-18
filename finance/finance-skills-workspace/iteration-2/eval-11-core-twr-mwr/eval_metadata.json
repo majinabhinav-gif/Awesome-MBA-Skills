@@ -1,0 +1,11 @@
+{
+  "eval_id": 11,
+  "eval_name": "core-twr-mwr-calculation",
+  "prompt": "A client invested $100,000 in a fund. After 6 months the fund was up 15% and they added another $50,000. After another 6 months the total value is $178,000. Calculate both the time-weighted return (TWR) and the money-weighted return (MWR/IRR) and explain why they differ.",
+  "assertions": [
+    {"text": "TWR calculation is approximately 24% (range 23.5-24.5%)", "type": "numerical_accuracy"},
+    {"text": "MWR/IRR is lower than TWR", "type": "contains_concept"},
+    {"text": "Shows sub-period return calculations step by step", "type": "contains_concept"},
+    {"text": "Identifies TWR as manager skill, MWR as investor experience", "type": "contains_concept"}
+  ]
+}
